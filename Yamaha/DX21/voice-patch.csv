@@ -1,84 +1,84 @@
-Parameter Name,Param #,Min Val,Max Val,Display Offset,Options,
-Op 4 Attack,0,0,31,,,
-Op 4 Decay 1,1,0,31,,,
-Op 4 Decay 2,2,0,31,,,
-Op 4 Release,3,0,15,,,
-Op 4 Decay 1 Level,4,0,15,,,
-Op 4 Key Scale Level,5,0,99,,,
-Op 4 Key Scale Rate,6,0,3,,,
-Op 4 EG Bias Sensitivity,7,0,7,,,
-Op 4 Amp Mod Sens,8,0,1,,,
-Op 4 Key Velocity,9,0,7,,,
-Op 4 Output Level,10,0,99,,,
-Op 4 Osc Freq,11,0,63,,,
-Op 4 Detune,12,0,7,,,
-Op 2 Attack,13,0,31,,,
-Op 2 Decay 1,14,0,31,,,
-Op 2 Decay 2,15,0,31,,,
-Op 2 Release,16,0,15,,,
-Op 2 Decay 1 Level,17,0,15,,,
-Op 2 Key Scale Level,18,0,99,,,
-Op 2 Key Scale Rate,19,0,3,,,
-Op 2 EG Bias Sensitivity,20,0,7,,,
-Op 2 Amp Mod Sens,21,0,1,,,
-Op 2 Key Velocity,22,0,7,,,
-Op 2 Output Level,23,0,99,,,
-Op 2 Osc Freq,24,0,63,,,
-Op 2 Detune,25,0,7,,,
-Op 3 Attack,26,0,31,,,
-Op 3 Decay 1,27,0,31,,,
-Op 3 Decay 2,28,0,31,,,
-Op 3 Release,29,0,15,,,
-Op 3 Decay 1 Level,30,0,15,,,
-Op 3 Key Scale Level,31,0,99,,,
-Op 3 Key Scale Rate,32,0,3,,,
-Op 3 EG Bias Sensitivity,33,0,7,,,
-Op 3 Amp Mod Sens,34,0,1,,,
-Op 3 Key Velocity,35,0,7,,,
-Op 3 Output Level,36,0,99,,,
-Op 3 Osc Freq,37,0,63,,,
-Op 3 Detune,38,0,7,,,
-Op 1 Attack,39,0,31,,,
-Op 1 Decay 1,40,0,31,,,
-Op 1 Decay 2,41,0,31,,,
-Op 1 Release,42,0,15,,,
-Op 1 Decay 1 Level,43,0,15,,,
-Op 1 Key Scale Level,44,0,99,,,
-Op 1 Key Scale Rate,45,0,3,,,
-Op 1 EG Bias Sensitivity,46,0,7,,,
-Op 1 Amp Mod Sens,47,0,1,,,
-Op 1 Key Velocity,48,0,7,,,
-Op 1 Output Level,49,0,99,,,
-Op 1 Osc Freq,50,0,63,,,
-Op 1 Detune,51,0,7,,,
-Algorithm,52,0,7,,,
-Feedback,53,0,7,,,
-LFO Speed,54,0,99,,,
-LFO Delay,55,0,99,,,
-Pitch Mod Depth,56,0,99,,,
-Amp Mod Depth,57,0,99,,,
-LFO Sync,58,0,1,,,
-LFO Wave,59,,,,"Saw Up, Square, Triangle, S/Hold",
-Pitch Mod Sens,60,0,7,,,
-Amp Mod Sens,61,0,7,,,
-Transpose,62,0,48,-24,,
-Poly,63,0,1,,,
-Bend Range,64,0,12,,,
-Porta Mode,65,0,1,,,
-Porta Time,66,0,99,,,
-Foot Volume,67,0,99,,,
-Sustain Foot,68,0,1,,,
-Porta Foot,69,0,1,,,
-Chorus,70,0,1,,,
-Mod Wheel Pitch Mod,71,0,99,,,
-Mod Wheel Amp Mod,72,0,99,,,
-Breath Pitch Mod,73,0,99,,,
-Breath Amp Mod,74,0,99,,,
-Breath Pitch Bias,75,0,99,,,
-Breath EG Bias,76,0,99,,,
-Pitch Env Rate 1,87,0,99,,,
-Pitch Env Rate 2,88,0,99,,,
-Pitch Env Rate 3,89,0,99,,,
-Pitch Env Level 1,90,0,99,,,
-Pitch Env Level 2,91,0,99,,,
-Pitch Env Level 3,92,0,99,,,
+Parameter Name,Param #,Byte #,Min Val,Max Val,Display Offset,Options,Path
+Op 4 Attack,0,Same as param,0,31,,,"op, i(3), attack"
+Op 4 Decay 1,1,,0,31,,,"op, i(3), decay, i(0)"
+Op 4 Decay 2,2,,0,31,,,"op, i(3), decay, i(1)"
+Op 4 Release,3,,0,15,,,"op, i(3), release"
+Op 4 Decay 1 Level,4,,0,15,,,"op, i(3), decay, level"
+Op 4 Key Scale Level,5,,0,99,,,"op, i(3), level, scale"
+Op 4 Key Scale Rate,6,,0,3,,,"op, i(3), rate, scale"
+Op 4 EG Bias Sensitivity,7,,0,7,,,"op, i(3), env, bias, sens"
+Op 4 Amp Mod Sens,8,,0,1,,,"op, i(3), amp, mod"
+Op 4 Key Velocity,9,,0,7,,,"op, i(3), velo"
+Op 4 Output Level,10,,0,99,,,"op, i(3), level"
+Op 4 Osc Freq,11,,0,63,,,"op, i(3), coarse"
+Op 4 Detune,12,,0,7,,,"op, i(3), detune"
+Op 2 Attack,13,,0,31,,,"op, i(1), attack"
+Op 2 Decay 1,14,,0,31,,,"op, i(1), decay, i(0)"
+Op 2 Decay 2,15,,0,31,,,"op, i(1), decay, i(1)"
+Op 2 Release,16,,0,15,,,"op, i(1), release"
+Op 2 Decay 1 Level,17,,0,15,,,"op, i(1), decay, level"
+Op 2 Key Scale Level,18,,0,99,,,"op, i(1), level, scale"
+Op 2 Key Scale Rate,19,,0,3,,,"op, i(1), rate, scale"
+Op 2 EG Bias Sensitivity,20,,0,7,,,"op, i(1), env, bias, sens"
+Op 2 Amp Mod Sens,21,,0,1,,,"op, i(1), amp, mod"
+Op 2 Key Velocity,22,,0,7,,,"op, i(1), velo"
+Op 2 Output Level,23,,0,99,,,"op, i(1), level"
+Op 2 Osc Freq,24,,0,63,,,"op, i(1), coarse"
+Op 2 Detune,25,,0,7,,,"op, i(1), detune"
+Op 3 Attack,26,,0,31,,,"op, i(2), attack"
+Op 3 Decay 1,27,,0,31,,,"op, i(2), decay, i(0)"
+Op 3 Decay 2,28,,0,31,,,"op, i(2), decay, i(1)"
+Op 3 Release,29,,0,15,,,"op, i(2), release"
+Op 3 Decay 1 Level,30,,0,15,,,"op, i(2), decay, level"
+Op 3 Key Scale Level,31,,0,99,,,"op, i(2), level, scale"
+Op 3 Key Scale Rate,32,,0,3,,,"op, i(2), rate, scale"
+Op 3 EG Bias Sensitivity,33,,0,7,,,"op, i(2), env, bias, sens"
+Op 3 Amp Mod Sens,34,,0,1,,,"op, i(2), amp, mod"
+Op 3 Key Velocity,35,,0,7,,,"op, i(2), velo"
+Op 3 Output Level,36,,0,99,,,"op, i(2), level"
+Op 3 Osc Freq,37,,0,63,,,"op, i(2), coarse"
+Op 3 Detune,38,,0,7,,,"op, i(2), detune"
+Op 1 Attack,39,,0,31,,,"op, i(0), attack"
+Op 1 Decay 1,40,,0,31,,,"op, i(0), decay, i(0)"
+Op 1 Decay 2,41,,0,31,,,"op, i(0), decay, i(1)"
+Op 1 Release,42,,0,15,,,"op, i(0), release"
+Op 1 Decay 1 Level,43,,0,15,,,"op, i(0), decay, level"
+Op 1 Key Scale Level,44,,0,99,,,"op, i(0), level, scale"
+Op 1 Key Scale Rate,45,,0,3,,,"op, i(0), rate, scale"
+Op 1 EG Bias Sensitivity,46,,0,7,,,"op, i(0), env, bias, sens"
+Op 1 Amp Mod Sens,47,,0,1,,,"op, i(0), amp, mod"
+Op 1 Key Velocity,48,,0,7,,,"op, i(0), velo"
+Op 1 Output Level,49,,0,99,,,"op, i(0), level"
+Op 1 Osc Freq,50,,0,63,,,"op, i(0), coarse"
+Op 1 Detune,51,,0,7,,,"op, i(0), detune"
+Algorithm,52,,0,7,,,algo
+Feedback,53,,0,7,,,feedback
+LFO Speed,54,,0,99,,,"lfo, speed"
+LFO Delay,55,,0,99,,,"lfo, delay"
+Pitch Mod Depth,56,,0,99,,,"pitch, mod, depth"
+Amp Mod Depth,57,,0,99,,,"amp, mod, depth"
+LFO Sync,58,,0,1,,,"lfo, sync"
+LFO Wave,59,,,,,"Saw Up, Square, Triangle, S/Hold","lfo, wave"
+Pitch Mod Sens,60,,0,7,,,"pitch, mod, sens"
+Amp Mod Sens,61,,0,7,,,"amp, mod, sens"
+Transpose,62,,0,48,-24,,transpose
+Poly,63,,0,1,,,Poly
+Bend Range,64,,0,12,,,bend
+Porta Mode,65,,0,1,,,"porta, mode"
+Porta Time,66,,0,99,,,"porta, time"
+Foot Volume,67,,0,99,,,"foot, volume"
+Sustain Foot,68,,0,1,,,sustain
+Porta Foot,69,,0,1,,,porta
+Chorus,70,,0,1,,,chorus
+Mod Wheel Pitch Mod,71,,0,99,,,"modWheel, pitch"
+Mod Wheel Amp Mod,72,,0,99,,,"modWheel, amp"
+Breath Pitch Mod,73,,0,99,,,"breath, pitch"
+Breath Amp Mod,74,,0,99,,,"breath, amp"
+Breath Pitch Bias,75,,0,99,,,"breath, pitch, bias"
+Breath EG Bias,76,,0,99,,,"breath, env, bias"
+Pitch Env Rate 1,87,,0,99,,,"pitch, env, rate, i(0)"
+Pitch Env Rate 2,88,,0,99,,,"pitch, env, rate, i(1)"
+Pitch Env Rate 3,89,,0,99,,,"pitch, env, rate, i(2)"
+Pitch Env Level 1,90,,0,99,,,"pitch, env, level, i(0)"
+Pitch Env Level 2,91,,0,99,,,"pitch, env, level, i(1)"
+Pitch Env Level 3,92,,0,99,,,"pitch, env, level, i(2)"
