@@ -62,7 +62,7 @@ LFO Wave,59,,,,,"Saw Up, Square, Triangle, S/Hold","lfo, wave"
 Pitch Mod Sens,60,,0,7,,,"pitch, mod, sens"
 Amp Mod Sens,61,,0,7,,,"amp, mod, sens"
 Transpose,62,,0,48,-24,,transpose
-Poly,63,,0,1,,,Poly
+Poly,63,,0,1,,,poly
 Bend Range,64,,0,12,,,bend
 Porta Mode,65,,0,1,,,"porta, mode"
 Porta Time,66,,0,99,,,"porta, time"
