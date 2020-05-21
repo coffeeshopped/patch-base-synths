@@ -1,0 +1,4 @@
+Parameter Name,Param #,Byte #,Byte Count,Min Val,Max Val,Display Offset,Options,Path
+Low Key,12,,,0,127,,,
+Hi Key,13,,,0,127,,,
+Bend Range,14,,,0,13,,13=Global,
