@@ -19,6 +19,8 @@ A Patch is made up of 6 subpatches:
 * Patch Effect
 * Patch Tones (A-D)
 
+Patch name is stored in the Common subpatch, bytes 0-f.
+
 ## Multi Patch
 
 
