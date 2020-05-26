@@ -1,0 +1,108 @@
+Syn Saw 1
+Syn Saw 2
+FAT Saw
+FAT Square
+Syn Pulse 1
+Syn Pulse2
+Syn Pulse3
+Syn Pulse4
+Syn Pulse5
+Pulse Mod
+Triangle
+Syn Sine
+Soft Pad
+Wire Str
+MIDI Clav
+Spark Vox1
+Spark Vox2
+Syn Sax
+Clav Wave
+Cello Wave
+Bright Digi
+Cutters
+Syn Bass
+Rad Hose
+Vocal Wave
+Wally Wave
+Brusky Ip
+Digiwave
+Can Wave 1
+Can Wave 2
+EML 5th
+Wave Scan
+Nasty
+Wave Table
+Fine Wine
+Funk Bass 1
+Funk Bass 2
+Strat Sust
+Harp Harm
+Full Organ
+Full Draw
+Doo
+Zzz Vox
+Org Vox
+Male Vox
+Kalimba
+Xylo
+Marim Wave
+Log Drum
+AgogoBells
+Bottle Hit
+Gamelan 1
+Gamelan 2
+Gamelan 3
+Tabla
+Pole lp
+Pluck Harp
+Nylon Str
+Hooky
+Muters
+Klack Wave
+Crystal
+Digi Bell
+FingerBell
+Digi Chime
+Bell Wave
+Org Bell
+Scrape Gut
+Strat Atk
+Hellow Bs
+Piano Atk
+EP Hard
+Clear Keys
+EP Distone
+Flute Push
+Shami
+Wood Crak
+Kimba Atk
+Block
+Org Atk 1
+Org Atk 2
+Cowbell
+Sm Metal
+StrikePole
+Pizz
+Switch
+Tuba Slap
+Plink
+Plunk
+EP Atk
+TVF Trig
+Flute Tone
+Pan Pipe
+Bottle Blow
+Shaku Atk
+FlugelWave
+French
+White Noise
+Pink Noise
+Pitch Wind
+Vox Noise1
+Vox Noise2
+Crunch Wind
+ThroatWind
+Metal Wind
+Windago
+Anklungs
+Wind Chime

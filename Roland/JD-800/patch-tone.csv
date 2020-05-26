@@ -1,73 +1,72 @@
-Parameter Name,Param #,Byte #,Byte Count,Min Val,Max Val,Display Offset,Options,Path
-Velocity curve,0,,,0,3,1,,"velo, curve"
-Hold control,1,,,0,1,,"OFF, ON","hold, ctrl"
-LFO1 Rate,2,,,0,64,,,"lfo, i(0), rate"
-LFO1 Delay,3,,,0,65,,"0 - 100, REL","lfo, i(0), delay"
-LFO1 Fade,4,,,0,64,-50,,"lfo, i(0), fade"
-LFO1 Waveform,5,,,0,4,,"TRI, SAW, SQU, S/H, RND","lfo, i(0), wave"
-LFO1 Offset,6,,,0,2,,"+, 0, -","lfo, i(0), offset"
-LFO1 Key trigger,7,,,0,1,,"OFF, ON","lfo, i(0), key, sync"
-LFO2 Rate,8,,,0,64,,,"lfo, i(1), rate"
-LFO2 Delay,9,,,0,65,,"0 - 100, REL","lfo, i(1), delay"
-LFO2 Fade,0A,,,0,64,-50,,"lfo, i(1), fade"
-LFO2 Waveform,0B,,,0,4,,"TRI, SAW, SQU, S/H, RND","lfo, i(1), wave"
-LFO2 Offset,0C,,,0,2,,"+, 0, -","lfo, i(1), offset"
-LFO2 Key trigger,0D,,,0,1,,"OFF, ON","lfo, i(1), key, sync"
-Wave source,0E,,,0,1,,"INT, CARD","wave, group"
-Waveform MSB,0F,,,0,1,,,"wave, number"
-Waveform LSB,10,,,0,7F,,"0 - 255 (First 107 are the internal waveforms, see note V-63 in manual)",
-Pitch coarse,11,,,0,60,-48,,"pitch, coarse"
-Pitch fine,12,,,0,64,-50,,"pitch, fine"
-Pitch random,13,,,0,64,,,"pitch, random"
-Key follow,14,,,0,10,,"-100, -50, -20, -10, -5, 0, +5, +10, +20, +50, +98, +99, +100, +101, +102, +150, +200(%)","pitch, keyTrk"
-Bender,15,,,0,1,,"OFF, ON",bend
-Pitch A-touch bend,16,,,0,1,,"OFF, ON","pitch, aftertouch"
-Pitch LFO1 sens,17,,,0,64,-50,,"pitch, lfo, i(0), depth"
-Pitch LFO2 sens,18,,,0,64,-50,,"pitch, lfo, i(1), depth"
-Pitch Lever sens,19,,,0,64,,LFO2(50) - 0 - LFO1(50),"pitch, lever, depth"
-Pitch A-touch mod sens,1A,,,0,64,,LFO2(50) - 0 - LFO1(50),"pitch, aftertouch, mod"
-Pitch Env Velo,1B,,,0,64,-50,,"pitch, env, velo"
-Pitch Env Time velo,1C,,,0,64,-50,,"pitch, env, time, vela"
-Pitch Env Time KF,1D,,,0,14,-10,,"pitch, env, time, keyTrk"
-Pitch Env Level 0,1E,,,0,64,-50,,"pitch, env, level, i(-1)"
-Pitch Env Time 1,1F,,,0,64,,,"pitch, env, time, i(0)"
-Pitch Env Level 1,20,,,0,64,-50,,"pitch, env, level, i(0)"
-Pitch Env Time 2,21,,,0,64,,,"pitch, env, time, i(1)"
-Pitch Env Time 3,22,,,0,64,,,"pitch, env, time, i(2)"
-Pitch Env Level 2,23,,,0,64,-50,,"pitch, env, level, i(1)"
-Filter mode,24,,,0,2,,"HPF, BPF, LPF","filter, type"
-Cutoff freq,25,,,0,64,,,cutoff
-Resonance,26,,,0,64,,,reson
-Filter Key follow,27,,,0,28,,"-100 - 0%(10% step), 0 - +150%(5% step)","filter, keyTrk"
-Filter A-touch sens,28,,,0,64,-50,,"filter, aftertouch, depth"
-Filter LFO select,29,,,0,1,,"LFO 1, LFO 2","filter, lfo"
-Filter LFO depth,2A,,,0,64,-50,,"filter, lfo, depth"
-TVF ENV depth,2B,,,0,64,-50,,"filter, env, depth"
-Filter Env Velo,2C,,,0,64,-50,,"filter, env, velo"
-Filter Env Time velo,2D,,,0,64,-50,,"filter, env, time, velo"
-Filter Env Time KF,2E,,,0,14,-10,,"filter, env, time, keyTrk"
-Filter Env Time 1,2F,,,0,64,,,"filter, env, time, i(0)"
-Filter Env Level 1,30,,,0,64,,,"filter, env, level, i(0)"
-Filter Env Time 2,31,,,0,64,,,"filter, env, time, i(1)"
-Filter Env Level 2,32,,,0,64,,,"filter, env, level, i(1)"
-Filter Env Time 3,33,,,0,64,,,"filter, env, time, i(2)"
-Filter Env Sustain level,34,,,0,64,,,"filter, env, level, i(2)"
-Filter Env Time 4,35,,,0,64,,,"filter, env, time, i(3)"
-Filter Env Level 4,36,,,0,64,,,"filter, env, level, i(3)"
-Bias direction,37,,,0,2,,"UP, LOW, U&L","bias, dir"
-Bias point,38,,,0,7F,,C1 - G9,"bias, pt"
-Bias level,39,,,0,14,-10,,"bias, level"
-Level,3A,,,0,64,,,level
-Amp A-touch sens,3B,,,0,64,-50,,"amp, aftertouch, depth"
-Amp LFO select,3C,,,0,1,,"LFO 1, LFO 2","amp, lfo"
-Amp LFO depth,3D,,,0,64,-50,,"amp, lfo, depth"
-Amp Env Velo,3E,,,0,64,-50,,"amp, env, velo"
-Amp Env Time velo,3F,,,0,64,-50,,"amp, env, time, velo"
-Amp Env Time KF,40,,,0,14,-10,,"amp, env, time, keyTrk"
-Amp Env Time 1,41,,,0,64,,,"amp, env, time, i(0)"
-Amp Env Level 1,42,,,0,64,,,"amp, env, level, i(0)"
-Amp Env Time 2,43,,,0,64,,,"amp, env, time, i(1)"
-Amp Env Level 2,44,,,0,64,,,"amp, env, level, i(1)"
-Amp Env Time 3,45,,,0,64,,,"amp, env, time, i(2)"
-Amp Env Sustain level,46,,,0,64,,,"amp, env, level, i(2)"
-Amp Env Time 4,47,,,0,64,,,"amp, env, time, i(3)"
+Parameter Name,Address,Byte Count,Min Val,Max Val,Display Offset,Options,Path,Notes
+Velocity curve,0,,0,3,1,,"velo, curve",
+Hold control,1,,0,1,,,"hold, ctrl",
+LFO1 Rate,2,,0,64,,,"lfo, i(0), rate",
+LFO1 Delay,3,,0,65,,,"lfo, i(0), delay","0 - 100, REL"
+LFO1 Fade,4,,0,64,-50,,"lfo, i(0), fade",
+LFO1 Waveform,5,,0,4,,"TRI, SAW, SQU, S/H, RND","lfo, i(0), wave",
+LFO1 Offset,6,,0,2,,"+, 0, -","lfo, i(0), offset",
+LFO1 Key trigger,7,,0,1,,,"lfo, i(0), key, sync",
+LFO2 Rate,8,,0,64,,,"lfo, i(1), rate",
+LFO2 Delay,9,,0,65,,,"lfo, i(1), delay","0 - 100, REL"
+LFO2 Fade,0A,,0,64,-50,,"lfo, i(1), fade",
+LFO2 Waveform,0B,,0,4,,"TRI, SAW, SQU, S/H, RND","lfo, i(1), wave",
+LFO2 Offset,0C,,0,2,,"+, 0, -","lfo, i(1), offset",
+LFO2 Key trigger,0D,,0,1,,,"lfo, i(1), key, sync",
+Wave source,0E,,0,1,,"INT, CARD","wave, group",
+Waveform,0F,2,0,1,,,"wave, number","0 - 255 (First 107 are the internal waveforms, see note V-63 in manual)"
+Pitch coarse,11,,0,60,-48,,"pitch, coarse",
+Pitch fine,12,,0,64,-50,,"pitch, fine",
+Pitch random,13,,0,64,,,"pitch, random",
+Key follow,14,,0,10,,"-100, -50, -20, -10, -5, 0, +5, +10, +20, +50, +98, +99, +100, +101, +102, +150, +200","pitch, keyTrk",
+Bender,15,,0,1,,,bend,
+Pitch A-touch bend,16,,0,1,,,"pitch, aftertouch",
+Pitch LFO1 sens,17,,0,64,-50,,"pitch, lfo, i(0), depth",
+Pitch LFO2 sens,18,,0,64,-50,,"pitch, lfo, i(1), depth",
+Pitch Lever sens,19,,0,64,,,"pitch, ctrl, depth",LFO2(50) - 0 - LFO1(50)
+Pitch A-touch mod sens,1A,,0,64,,,"pitch, aftertouch, mod",LFO2(50) - 0 - LFO1(50)
+Pitch Env Velo,1B,,0,64,-50,,"pitch, env, velo",
+Pitch Env Time velo,1C,,0,64,-50,,"pitch, env, time, velo",
+Pitch Env Time KF,1D,,0,14,-10,,"pitch, env, time, keyTrk",
+Pitch Env Level 0,1E,,0,64,-50,,"pitch, env, level, i(-1)",
+Pitch Env Time 1,1F,,0,64,,,"pitch, env, time, i(0)",
+Pitch Env Level 1,20,,0,64,-50,,"pitch, env, level, i(0)",
+Pitch Env Time 2,21,,0,64,,,"pitch, env, time, i(1)",
+Pitch Env Time 3,22,,0,64,,,"pitch, env, time, i(2)",
+Pitch Env Level 2,23,,0,64,-50,,"pitch, env, level, i(1)",
+Filter mode,24,,0,2,,"HPF, BPF, LPF","filter, type",
+Cutoff freq,25,,0,64,,,cutoff,
+Resonance,26,,0,64,,,reson,
+Filter Key follow,27,,0,28,,,"filter, keyTrk","-100 - 0%(10% step), 0 - +150%(5% step)"
+Filter A-touch sens,28,,0,64,-50,,"filter, aftertouch, depth",
+Filter LFO select,29,,0,1,,"LFO 1, LFO 2","filter, lfo",
+Filter LFO depth,2A,,0,64,-50,,"filter, lfo, depth",
+TVF ENV depth,2B,,0,64,-50,,"filter, env, depth",
+Filter Env Velo,2C,,0,64,-50,,"filter, env, velo",
+Filter Env Time velo,2D,,0,64,-50,,"filter, env, time, velo",
+Filter Env Time KF,2E,,0,14,-10,,"filter, env, time, keyTrk",
+Filter Env Time 1,2F,,0,64,,,"filter, env, time, i(0)",
+Filter Env Level 1,30,,0,64,,,"filter, env, level, i(0)",
+Filter Env Time 2,31,,0,64,,,"filter, env, time, i(1)",
+Filter Env Level 2,32,,0,64,,,"filter, env, level, i(1)",
+Filter Env Time 3,33,,0,64,,,"filter, env, time, i(2)",
+Filter Env Sustain level,34,,0,64,,,"filter, env, level, i(2)",
+Filter Env Time 4,35,,0,64,,,"filter, env, time, i(3)",
+Filter Env Level 4,36,,0,64,,,"filter, env, level, i(3)",
+Bias direction,37,,0,2,,"UP, LOW, U&L","bias, direction",
+Bias point,38,,0,7F,,,"bias, pt",C1 - G9
+Bias level,39,,0,14,-10,,"bias, level",
+Level,3A,,0,64,,,level,
+Amp A-touch sens,3B,,0,64,-50,,"amp, aftertouch, depth",
+Amp LFO select,3C,,0,1,,"LFO 1, LFO 2","amp, lfo",
+Amp LFO depth,3D,,0,64,-50,,"amp, lfo, depth",
+Amp Env Velo,3E,,0,64,-50,,"amp, env, velo",
+Amp Env Time velo,3F,,0,64,-50,,"amp, env, time, velo",
+Amp Env Time KF,40,,0,14,-10,,"amp, env, time, keyTrk",
+Amp Env Time 1,41,,0,64,,,"amp, env, time, i(0)",
+Amp Env Level 1,42,,0,64,,,"amp, env, level, i(0)",
+Amp Env Time 2,43,,0,64,,,"amp, env, time, i(1)",
+Amp Env Level 2,44,,0,64,,,"amp, env, level, i(1)",
+Amp Env Time 3,45,,0,64,,,"amp, env, time, i(2)",
+Amp Env Sustain level,46,,0,64,,,"amp, env, level, i(2)",
+Amp Env Time 4,47,,0,64,,,"amp, env, time, i(3)",
