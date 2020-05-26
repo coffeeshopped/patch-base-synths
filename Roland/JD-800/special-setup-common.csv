@@ -1,0 +1,11 @@
+Parameter Name,Param #,Byte #,Byte Count,Min Val,Max Val,Display Offset,Options,Path
+Low freq,00,,,00,01,,"200, 400Hz",
+Low gain,01,,,00,1E,-15,-15.0 - +15.0dB (1dB step),
+Mid freq,02,,,00,10,,"200, 250, 315, 400, 500, 630, 800, 1k, 1.25k, 1.6k, 2k, 2.5k, 3.15k, 4k, 5k, 6.3k, 8kHz",
+Mid Q,03,,,00,04,,"0.5, 1.0, 2.0, 4.0, 9.0",
+Mid gain,04,,,00,1E,-15,-15.0 - +15.0dB (1dB step),
+High freq,05,,,00,01,,"4k, 8kHz",
+High gain,06,,,00,1E,-15,-15.0 - +15.0dB (1dB step),
+Bender range down,07,,,00,30,,,
+Bender range up,08,,,00,0C,,,
+A-touch bend sens,09,,,00,1A,,"-36, -24,     -12 - +12 semitones",

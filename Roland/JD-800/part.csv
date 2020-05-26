@@ -1,0 +1,7 @@
+Parameter Name,Param #,Byte #,Byte Count,Min Val,Max Val,Display Offset,Options,Path
+Level,00,,,00,64,,,
+Pan,01,,,00,3C,,L30 - 00 - 30R,
+MIDI Rx Ch.,02,,,00,10,,"1 - 16, OFF",
+Output assign,03,,,00,01,,"MIX, DIR",
+Effect mode,04,,,00,03,,"DRY, REV, CHO+REV, DLY+REV",
+Effect level,05,,,00,64,,,

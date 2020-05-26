@@ -1,0 +1,7 @@
+Parameter Name,Param #,Byte #,Byte Count,Min Val,Max Val,Display Offset,Options,Path
+Mute group,0A,,,00,08,,"OFF,   A - H",
+ENV mode,0B,,,00,01,,"SUSTAIN, NO SUSTAIN",
+Pan,0C,,,00,3C,,L30 - 00 - 30R,
+Effect mode,0D,,,00,03,,"DRY, REV, CHO+REV, DLY+REV",
+Effect level,0E,,,00,64,,,
+/// Dummy,0F,,,00,00,,,

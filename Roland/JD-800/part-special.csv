@@ -1,0 +1,5 @@
+Parameter Name,Param #,Byte #,Byte Count,Min Val,Max Val,Display Offset,Options,Path
+Level,00,,,00,64,,,
+MIDI Rx Ch.,01,,,00,10,,"1 - 16, OFF",
+Output assign,02,,,00,01,,"MIX, DIR",
+/// Dummy,03,,,00,00,,,
