@@ -1,0 +1,6 @@
+Parameter Name,Param #,Min Val,Max Val,Display Offset,Options,Path,Notes
+Zone Lo,1,0,127,,,,
+Zone Hi,2,0,127,,,,
+Velo,3,0,,,,,2 values are packed in this byte. See docs
+FX Path,4,0,3,,,,
+Volume,5,0,127,,,,

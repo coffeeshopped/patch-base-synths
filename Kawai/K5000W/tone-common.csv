@@ -1,0 +1,6 @@
+Parameter Name,Param #,Min Val,Max Val,Display Offset,Options,Path,Notes
+FX Algorithm,1,0,3,,,,
+Reverb Type,2,0,10,,,,
+Reverb Dry/Wet 1,3,0,100,,,,
+Reverb Dry/Wet 2,4,0,100,,,,
+Reverb Param 2,5,0,127,,,,
