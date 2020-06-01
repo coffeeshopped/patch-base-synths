@@ -1,0 +1,5 @@
+Parameter Name,NRPN,Min Val,Max Val,Display Offset,Options,Path,Notes
+Coarse Tune,4097,0,24,,,,
+Fine Tune,4096,0,50,,,,
+MIDI Channel,4098,0,16,,,,0=All
+MIDI Clock Mode,4099,,,,"Off, Master, Slave, Slave Thru",,

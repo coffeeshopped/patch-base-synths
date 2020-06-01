@@ -1,0 +1,5 @@
+Parameter Name,NRPN Layer A,NRPN Layer B,Min Val,Max Val,Display Offset,Options,Path,Notes
+Osc 1 Freq,0,2048,0,120,,,,
+Osc 1 Freq Fine,1,2049,0,100,,,,
+Osc 1 Shape,2,2050,,,,"Saw, Saw + Tri, Tri, Pulse ",,
+Osc 1 Glide,3,2051,0,127,,,,
