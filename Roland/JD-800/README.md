@@ -25,3 +25,8 @@ Patch name is stored in the Common subpatch, bytes 0-f.
 
 
 ## Fetch Requests
+
+
+## MIDI Info
+
+The JD-800 uses 3-byte parameter addresses. 
