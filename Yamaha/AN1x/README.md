@@ -5,11 +5,10 @@ The sysex implementation can be found in the [AN1x Data List from Yamaha](https:
 ## Editor Sections
 
 * Global
-* Program
-* Program Bank 1
-* Program Bank 2
-* Program Bank 3
-* Program Bank 4
+* Voice
+* Pattern
+* Voice Bank
+* Pattern Bank
 
 ## Fetch Requests
 
