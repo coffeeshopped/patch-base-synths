@@ -1,0 +1,6 @@
+Parameter Name,Address,Size,Min Val,Max Val,Display Offset,Options,Path,Notes
+Category,0a,1,0,16,,,,need Options still
+Common Scene Select,0b,1,,,,"1: Scene 1, 2: Scene 2, 3: Scene Ctrl",,
+Layer Mode,0c,1,,,,"Single, Unison, Dual, Dual-Unison, Split, Split-Unison",,
+Layer Pan,0w,1,,,,"Off, Alternate, Random",,
+Layer Separation,0e,1,0,32,,,,

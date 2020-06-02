@@ -1,0 +1,7 @@
+Parameter Name,Address,Size,Min Val,Max Val,Display Offset,Options,Path,Notes
+Poly Mode,0,1,,,,"Poly, Mono, Legato",,
+Pitch Up,1,1,2c,54,-40,,,
+Pitch Down,2,1,2c,54,-40,,,
+PEG Decay,3,1,0,7f,-40,,,
+PEG Depth,4,1,0,7f,-40,,,
+PEG Switch,5,1,,,,"VCO1, VCO2, Both, Normal, Sustain-Key",,
