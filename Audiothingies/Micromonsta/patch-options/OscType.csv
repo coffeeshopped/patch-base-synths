@@ -1,0 +1,73 @@
+#,Short Name,Long Name
+0,mph,tri-saw-sq morph
+1,sin,sinus
+2,tri,triangle
+3,saw,saw
+4,squ,square
+5,ss1,supersaw (bal)
+6,ss2,supersaw (unbal)
+7,sws,sync'ed saw
+8,sqs,sync'ed square
+9,rz1,pd rezo saw
+10,rz2,pd rezo tri
+11,rz3,pd rezo trp
+12,w01,wavetable 01
+13,w02,wavetable 02
+14,w03,wavetable 03
+15,w04,wavetable 04
+16,w05,wavetable 05
+17,w06,wavetable 06
+18,w07,wavetable 07
+19,w08,wavetable 08
+20,w09,wavetable 09
+21,w10,wavetable 10
+22,w11,wavetable 11
+23,w12,wavetable 12
+24,w13,wavetable 13
+25,w14,wavetable 14
+26,w15,wavetable 15
+27,w16,wavetable 16
+28,w17,wavetable 17
+29,w18,wavetable 18
+30,w19,wavetable 19
+31,w20,wavetable 20
+32,w21,wavetable 21
+33,w22,wavetable 22
+34,w23,wavetable 23
+35,w24,wavetable 24
+36,w25,wavetable 25
+37,w26,wavetable 26
+38,w27,wavetable 27
+39,w28,wavetable 28
+40,w29,wavetable 29
+41,w30,wavetable 30
+42,z01,wt1 - no interp
+43,z02,wt2 - no interp
+44,z03,wt3 - no interp
+45,z04,wt4 - no interp
+46,z05,wt5 - no interp
+47,z06,wt6 - no interp
+48,z07,wt7 - no interp
+49,z08,wt8 - no interp
+50,z09,wt9 - no interp
+51,z10,wt10 - no interp
+52,z11,wt11 - no interp
+53,z12,wt12 - no interp
+54,z13,wt13 - no interp
+55,z14,wt14 - no interp
+56,z15,wt15 - no interp
+57,z16,wt16 - no interp
+58,z17,wt17 - no interp
+59,z18,wt18 - no interp
+60,z19,wt19 - no interp
+61,z20,wt20 - no interp
+62,z21,wt21 - no interp
+63,z22,wt22 - no interp
+64,z23,wt23 - no interp
+65,z24,wt24 - no interp
+66,z25,wt25 - no interp
+67,z26,wt26 - no interp
+68,z27,wt27 - no interp
+69,z28,wt28 - no interp
+70,z29,wt29 - no interp
+71,z30,wt30 - no interp

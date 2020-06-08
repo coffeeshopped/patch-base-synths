@@ -1,0 +1,9 @@
+#,Short Name,Long Name
+0,LP1,1-pole lowpass filter
+1,LP2,2-pole lowpass filter
+2,LP3,3-pole lowpass filter
+3,LP4,4-pole lowpass filter
+4,HP2,2-pole hipass filter
+5,BP2,2-pole bandpass filter
+6,Not,Notch filter
+7,Pha,Phaser filter

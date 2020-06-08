@@ -1,0 +1,14 @@
+#,Short Name,Long Name
+0,kbd,keyboard tracking
+1,vel,note velocity
+2,aft,aftertouch
+3,bnd,pitch bend
+4,whl,mod wheel
+5,Cst,constant value
+6,rnd,random number
+7,env1,envelope 1
+8,env2,envelope 2
+9,env3,envelope 3
+10,lfo1,LFO 1
+11,lfo2,LFO 2
+12,lfo3,LFO 3

@@ -1,0 +1,14 @@
+#,Short Name,Long Name
+0,Kbd,Kbd tracking + PB
+1,vel,Velocity
+2,aft,Aftertouch
+3,bnd,Pitch Bend
+4,whl,Mod Wheel
+5,cst,Offset
+6,Rnd,Random
+7,Env1,Envelope 1
+8,Env2,Envelope 2
+9,Env3,Envelope 3
+10,Lfo1,LFO 1
+11,lfo2,LFO 2
+12,lfo3,LFO 3

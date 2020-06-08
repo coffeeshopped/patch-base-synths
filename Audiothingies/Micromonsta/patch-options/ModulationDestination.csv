@@ -1,0 +1,29 @@
+#,Short Name,Long Name
+0,ptc,Pitch
+1,fin,Pitch (fine)
+2,tn1,Osc1 tune
+3,ft1,Osc1 fine tune
+4,Tn2,Osc2 tune
+5,ft2,Osc2 fine tune
+6,Osc1,Osc1 waveshape
+7,osc2,Osc2 waveshape
+8,nze,Noise color
+9,x01,Osc1 mix
+10,X02,Osc2 mix
+11,xsb,Sub mix
+12,xrm,Ringmod mix
+13,xnz,Noise mix
+14,cut,Cutoff frequency
+15,res,Resonance
+16,a1,Env1 attack time
+17,d1,Env1 decay time
+18,r1,Env1 release time
+19,a2,Env2 attack time
+20,d2,Env2 decay time
+21,r2,Env2 release time
+22,a3,Env3 attack time
+23,d3,Env3 decay time
+24,r3,Env3 release time
+25,Lfo1,LFO1 Speed
+26,lfo2,LFO2 Speed
+27,lfo3,LFO2 Speed
