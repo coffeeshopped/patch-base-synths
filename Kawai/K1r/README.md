@@ -10,7 +10,7 @@ TODO
 
 ## Voice Patch
 
-TODO
+Name is in bytes 0-9 of the patch.
 
 ## Multi Patch
 

@@ -1,0 +1,107 @@
+Parameter Name,Byte #,Bits,Param Address Bytes,Min Val,Max Val,Display Offset,Options,Path,Notes
+,,,,,,,,,
+< COMMON / GLOBAL>,,,,,,,,,"MIDIQuest and Edisyn send complete Program when Name is edited - MIDIQuest sends complete patch for any edits in ""Global"" section of program"
+Volume,10,,03 00,0,99,,,,
+Poly mode,11,,1B 00,0,2,,"pol 1, pol 2, solo",,
+Sources 2/4,11,,0E 00,0,1,,"2, 4",,
+"am Sl, S2",11,,24 00,0,2,,"off, 2>1, rev",,
+"am S3, S4",11,,25 00,0,2,,"off, 4>3, rev",,
+prs > Freq,12,,18 00,0,100,-50,,,
+Vibrato Dep,13,,0F 00,0,100,-50,,,
+vib Pres > vib,14,,12 00,0,100,-50,,,
+Pitch Bend,15,,19 00,0,12,,,,
+lfo speed,16,,10 00,0,100,,,,
+lfo shape,17,0…1,11 00,0,3,,"tri, saw, sqr, rnd",,
+ks curve,17,2…4,1A 00,0,4,1,,,"The index of ""1A"" in this parameter is a guess - based on the K1 Wave List SysEx spec. Edisyn does not have this parameter in its UI, so no individual edit message"
+vib wheel,17,5…6,13 00,0,1,,"depth, speed",,
+Auto bend depth,18,,14 00,0,100,-50,,,
+Auto bend time,19,,16 00,0,100,,,,
+Auto bend vel > dep,20,,17 00,0,100,-50,,,
+Auto bend ks > time,21,,15 00,0,100,-50,,,
+s1 mute,22,0,,0,1,,,,"These four mutes are interesting. It appears that they are represented by bits, according to the SysEx spec, however, it appears that the documentation is wrong."
+s2 mute,22,1,,0,1,,,,"From what I can tell, the bit = 1 means the source is muted. On MIDIQuest, all four sources enabled, generates a value of 00H in the 31st byte of the complete program dump."
+s3 mute,22,2,,0,1,,,,"Similarly, it's 0AH when layers 1 and 3 are not muted. Edisyn has these parameters just wrong - the mute switch on Source 2, 3, and 4 is always sent with a by = 00H no matter what the setting."
+s4 mute,22,3,,0,1,,,,"0/mute, 1 /not mute"
+,,,,,,,,,
+<SOURCES>,,,,,,,,,
+S1 fine,23,,1E 00,0,100,-50,,,"Note that MIDIQuest shifts to Single Parameter MIDI Messages for the Source Parameters, so I'm not 100% about the Byte # value for these"
+S2,24,,1E 02,0,100,-50,,,
+S3,25,,1E 04,0,100,-50,,,
+S4,26,,1E 06,0,100,-50,,,
+s1 Coarse,27,,1C 00,60,108,-84,,,"+/- 24 when Key Track = on, 0-127 when Key Track = off"
+S2,28,,1C 02,60,108,-84,,,"+/- 24 when Key Track = on, 0-127 when Key Track = off"
+S3,29,,1C 04,60,108,-84,,,"+/- 24 when Key Track = on, 0-127 when Key Track = off"
+S4,30,,1C 06,60,108,-84,,,"+/- 24 when Key Track = on, 0-127 when Key Track = off"
+s1 Fixed Pitch (Key),27,,1D 00,60,108,-84,,,"+/- 24 when Key Track = on, 0-127 when Key Track = off"
+S2,28,,1D 02,60,108,-84,,,"+/- 24 when Key Track = on, 0-127 when Key Track = off"
+S3,29,,1D 04,60,108,-84,,,"+/- 24 when Key Track = on, 0-127 when Key Track = off"
+S4,30,,1D 06,60,108,-84,,,"+/- 24 when Key Track = on, 0-127 when Key Track = off"
+s1 Wave Select,31,,23 00,0,127,,,,"Note that the LS Bit of the 8th byte of this message is the MS Bit of the Wave Selection, which goes from 0 to 255, or 00 00 to 01 FF  for the either and 9th bytes"
+S2,32,,23 02,0,127,,,,"Simiarly, bits 2 and 3 of the 8th byte indicate the Source Select: 02 00 -> 03 7F"
+S3,33,,23 04,0,127,,,,04 00 -> 05 7F
+S4,34,,23 05,0,127,,,,06 00 -> 07 7F
+S1 Key Track,35,,1F 00,0,1,,,,
+S2,35,,1F 02,0,1,,,,
+S3,35,,1F 04,0,1,,,,
+S4,35,,1F 06,0,1,,,,
+S1 Vibrato Auto Bend,35,,20 00,0,1,,,,
+S2,35,,20 02,0,1,,,,
+S3,35,,20 04,0,1,,,,
+S4,35,,20 06,0,1,,,,
+S1 Pressure > Pitch,35,,21 00,0,1,,,,
+S2,35,,21 02,0,1,,,,
+S3,35,,21 04,0,1,,,,
+S4,35,,21 06,0,1,,,,
+S1 Velocity Curve,35,,2F 00,0,7,1,,,
+S2,36,,2F 02,0,7,1,,,
+S3,37,,2F 04,0,7,1,,,
+S4,38,,2F 06,0,7,1,,,
+S1 Envelope Level,39,,29 00,0,100,,,,
+S2,40,,29 02,0,100,,,,
+S3,41,,29 04,0,100,,,,
+S4,42,,29 06,0,100,,,,
+S1 Envelope Delay,43,,2A 00,0,100,,,,
+S2,44,,2A 02,0,100,,,,
+S3,45,,2A 04,0,100,,,,
+S4,46,,2A 06,0,100,,,,
+S1 Envelope Attack,47,,2B 00,0,100,,,,
+S2,48,,2B 02,0,100,,,,
+S3,49,,2B 04,0,100,,,,
+S4,50,,2B 06,0,100,,,,
+S1 Envelope Decay,51,,2C 00,0,100,,,,
+S2,52,,2C 02,0,100,,,,
+S3,53,,2C 04,0,100,,,,
+S4,54,,2C 06,0,100,,,,
+S1 Envelope Sustain,55,,2D 00,0,100,,,,
+S2,56,,2D 02,0,100,,,,
+S3,57,,2D 04,0,100,,,,
+S4,58,,2D 06,0,100,,,,
+S1 Envelope Release,59,,2E 00,0,100,,,,
+S2,60,,2E 02,0,100,,,,
+S3,61,,2E 04,0,100,,,,
+S4,62,,2E 06,0,100,,,,
+S1 Level Mod Vel,63,,30 00,0,100,-50,,,
+S2,64,,30 02,0,100,-50,,,
+S3,65,,30 04,0,100,-50,,,
+S4,66,,30 06,0,100,-50,,,
+S1 Level Mod Pressure,67,,31 00,0,100,-50,,,
+S2,68,,31 02,0,100,-50,,,
+S3,69,,31 04,0,100,-50,,,
+S4,70,,31 06,0,100,-50,,,
+S1 Level Mod Key Scale,71,,32 00,0,100,-50,,,
+S2,72,,32 02,0,100,-50,,,
+S3,73,,32 04,0,100,-50,,,
+S4,74,,32 06,0,100,-50,,,
+S1 Velocity Time Mode,75,,33 00,0,100,-50,,,
+S2,76,,33 02,0,100,-50,,,
+S3,77,,33 04,0,100,-50,,,
+S4,78,,33 06,0,100,-50,,,
+S1 Key Scaling Time Mod,79,,34 00,0,100,-50,,,
+S2,80,,34 02,0,100,-50,,,
+S3,81,,34 04,0,100,-50,,,
+S4,82,,34 06,0,100,-50,,,
+S1 Key Scaling Pitch Mod,83,,22 00,0,100,-50,,,
+S2,84,,22 02,0,100,-50,,,
+S3,85,,22 04,0,100,-50,,,
+S4,86,,22 06,0,100,-50,,,
+Checksum,87,,,,,,,,"Check sum value (s87) is the sum of the A5H and s0 - s86, and bit 7 must be clear"
