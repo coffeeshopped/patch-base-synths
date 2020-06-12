@@ -29,4 +29,8 @@ Patch name is stored in the Common subpatch, bytes 0-f.
 
 ## MIDI Info
 
-The JD-800 uses 3-byte parameter addresses. 
+The JD-800 uses 3-byte parameter addresses.
+
+## External Cards for Additional PCM Waveforms
+
+Thanks to [Bobby Blues' website](http://bobbyblues.recup.ch/roland_jd-800/jd-800_soundbanks.htm) for being an information source for the names of the PCM waveforms on the Roland SL-JD80-* cards.

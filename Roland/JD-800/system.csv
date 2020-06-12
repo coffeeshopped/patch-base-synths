@@ -1,26 +1,26 @@
-Parameter Name,Param #,Byte #,Byte Count,Min Val,Max Val,Display Offset,Options,Path
-Master tune,0,,,0,64,,"427.5 - 452.9Hz (+/-50cent, 1cent step)",
-Treble,1,,,0,0A,-5,,
-Mid,2,,,0,0A,-5,,
-Bass,3,,,0,0A,-5,,
-Chorus switch,4,,,0,1,,,
-Delay switch,5,,,0,1,,,
-Reverb switch,6,,,0,1,,,
-Delay Center tap,7,,,0,7D,,"0.1-5ms(0.1ms step), 5.5-10ms(0.5ms step), 11-40ms(1ms step), 50-200ms(10ms step), 220-600ms(20ms step)",
-Delay Center level,8,,,0,64,,,
-Delay Left tap,9,,,0,7D,,"0.1-5ms(0.1ms step), 5.5-10ms(0.5ms step), 11-40ms(1ms step), 50-200ms(10ms step), 220-600ms(20ms step)",
-Delay Left level,0A,,,0,64,,,
-Delay Right tap,0B,,,0,7D,,"0.1-5ms(0.1ms step), 5.5-10ms(0.5ms step), 11-40ms(1ms step), 50-200ms(10ms step), 220-600ms(20ms step)",
-Delay Right level,0C,,,0,64,,,
-Delay Feedback,0D,,,0,62,,-98 - 0 - +98(2% step),
-Chorus Rate,0E,,,0,63,,0.1 - 10Hz(0.1Hz step),
-Chorus Depth,0F,,,0,64,,,
-Chorus Delay time,10,,,0,63,,"0.1-5ms(0.1ms step), 5.5-10ms(0.5ms step), 11-50ms(1ms step)",
-Chorus Feedback,11,,,0,62,,-98 - 0 - +98(2% step),
-Chorus Level,12,,,0,64,,,
-Reverb Type,13,,,0,9,,"ROOM1, ROOM2, HALL1, HALL2, HALL3, HALL4, GATE, REVERSE, FLYING1, FLYING2",
-Reverb Pre delay,14,,,0,79,,0 - 120ms (1ms step),
-Reverb Early ref level,15,,,0,64,,,
-Reverb HF damp,16,,,0,10,,"500, 630, 800, 1k, 1.25k, 1.6k, 2k, 2.5k 3.15k, 4k, 5k, 6.3k 8k, 10k 12.5k, 16kHz, BYPASS",
-Reverb Time,17,,,0,64,,"0.1 - 10s (0.1s step), 10 - 20s(0.5s step) ; (ROOM1/2, HALL1/2/3/4) /// 5 - 500ms (5ms step) ; (GATE, REVERSE, FLYING1/2)",
-Reverb Level,18,,,0,64,,,
+Parameter Name,Param #,Min Val,Max Val,Display Offset,Options,Path,Notes
+Master tune,0,0,64,-50,,tune,"427.5 - 452.9Hz (+/-50cent, 1cent step)"
+Treble,1,0,0A,-5,,hi,
+Mid,2,0,0A,-5,,mid,
+Bass,3,0,0A,-5,,lo,
+Chorus switch,4,0,1,,,"chorus, on",
+Delay switch,5,0,1,,,"delay, on",
+Reverb switch,6,0,1,,,"reverb, on",
+Delay Center tap,7,0,7D,,,"delay, mid, time","0.1-5ms(0.1ms step), 5.5-10ms(0.5ms step), 11-40ms(1ms step), 50-200ms(10ms step), 220-600ms(20ms step)"
+Delay Center level,8,0,64,,,"delay, mid, level",
+Delay Left tap,9,0,7D,,,"delay, left, time","0.1-5ms(0.1ms step), 5.5-10ms(0.5ms step), 11-40ms(1ms step), 50-200ms(10ms step), 220-600ms(20ms step)"
+Delay Left level,0A,0,64,,,"delay, left,level",
+Delay Right tap,0B,0,7D,,,"delay, right, time","0.1-5ms(0.1ms step), 5.5-10ms(0.5ms step), 11-40ms(1ms step), 50-200ms(10ms step), 220-600ms(20ms step)"
+Delay Right level,0C,0,64,,,"delay, right, level",
+Delay Feedback,0D,0,62,-48,,"delay, feedback",
+Chorus Rate,0E,0,63,,,"chorus, rate",0.1 - 10Hz(0.1Hz step)
+Chorus Depth,0F,0,64,,,"chorus, depth",
+Chorus Delay time,10,0,63,,,"chorus, delay","0.1-5ms(0.1ms step), 5.5-10ms(0.5ms step), 11-50ms(1ms step)"
+Chorus Feedback,11,0,62,,,"chorus, feedback",-98 - 0 - +98(2% step)
+Chorus Level,12,0,64,,,"chorus, level",
+Reverb Type,13,0,9,,"ROOM1, ROOM2, HALL1, HALL2, HALL3, HALL4, GATE, REVERSE, FLYING1, FLYING2","reverb, type",
+Reverb Pre delay,14,0,79,,,"reverb, pre",0 - 120ms (1ms step)
+Reverb Early ref level,15,0,64,,,"reverb, early",
+Reverb HF damp,16,0,10,,"500, 630, 800, 1k, 1.25k, 1.6k, 2k, 2.5k 3.15k, 4k, 5k, 6.3k 8k, 10k 12.5k, 16kHz, BYPASS","reverb, hi, cutoff",
+Reverb Time,17,0,64,,,"reverb, time","0.1 - 10s (0.1s step), 10 - 20s(0.5s step) ; (ROOM1/2, HALL1/2/3/4) /// 5 - 500ms (5ms step) ; (GATE, REVERSE, FLYING1/2)"
+Reverb Level,18,0,64,,,"reverb, level",

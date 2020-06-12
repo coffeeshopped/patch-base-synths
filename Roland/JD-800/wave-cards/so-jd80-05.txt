@@ -1,0 +1,14 @@
+Tp Sect
+Tb/Tp Sect
+LoSax Sect
+Solo Tp 1
+Solo Tp 2
+Solo Tp 3
+Fat Tp mf
+Fat Tp ff
+Solo Tb mf
+Solo Tb ff
+SoloFlugel
+HarmonMut1
+HarmonMut2
+HarmonMut3

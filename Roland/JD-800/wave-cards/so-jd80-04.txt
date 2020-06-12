@@ -1,0 +1,7 @@
+Strings 1
+Strings 2
+Strings 3
+Strings Atk
+Pizzicato1
+Pizzicato2
+Pizzicato3

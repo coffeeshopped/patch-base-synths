@@ -1,0 +1,54 @@
+Fat Kick
+Solid Kick
+Mach Kick
+Real Kick
+Deep Kick
+Room Kick
+Dry Stick
+Room Stick
+LA SN
+Snappy SN
+Fat SN 1
+Fat SN 2
+Wood SN
+Room SN
+Loose SN
+Whack SN
+Real SN
+Lite SN
+Rock SN
+Hard SN
+R8 rimshot
+AttackTom1
+AttackTom2
+AttackTom3
+Power Tom
+Closed HH1
+Closed HH2
+Open HH
+Crash Cym
+Ride Cym
+Ride Bell
+Verb Claps
+Agogo
+Clave 1
+Clave 2
+Guiro Long
+GuiroShort
+Triangle
+Whistle
+Cowbell 2
+Block 2
+Maraca
+Cabasa Up
+CabasaDown
+Tambourin
+Slap Cga
+Mute Cga 1
+Mute Cga 2
+Hi Conga
+Lo Conga
+Hi Bongo
+Lo Bongo
+Timabale
+Chekere
