@@ -1,0 +1,23 @@
+Off
+Seq 1
+Seq 2
+Seq 3
+Seq 4
+LFO 1
+LFO 2
+LFO 3
+LFO 4
+Env LPF
+Env VCA
+Env 3
+Pitchbend
+Mod Wheel
+Pressure
+Breath
+Foot Pedal
+Expression Pedal
+Velocity
+Note Number
+Noise
+DC
+Audio Out
