@@ -1,5 +1,30 @@
 Parameter Name,NRPN,Min Val,Max Val,Display Offset,Options,Path,Notes
-Coarse Tune,4097,0,24,,,,
-Fine Tune,4096,0,50,,,,
+Master Coarse Tune,4097,0,24,-12,,,Semitones
+Master Fine Tune,4096,0,100,-50,,,Cents
 MIDI Channel,4098,0,16,,,,0=All
-MIDI Clock Mode,4099,,,,"Off, Master, Slave, Slave Thru",,
+MIDI Clock Mode,4099,,,,"Off, Master, Slave, Slave Thru, Slave No S/S",,
+MIDI Clock Cable,4100,,,,"MIDI Port, USB",,
+MIDI Param Send,4101,,,,"Off, CC, NRPN",,"Controller received, but not transmitted"
+MIDI Param Receive,4102,,,,"Off, CC, NRPN",,"Controller transmitted, but ignored when received"
+MIDI Control Enable,4103,,,,"Off, On",,
+MIDI Sysex Cable,4104,,,,"MIDI, USB",,
+MIDI Out Select,4105,,,,"MIDI, USB, MIDI+USB",,
+Local Control,4107,,,,"Off, On",,"Controller received, but not transmitted"
+Pot Mode,4109,,,,"Relative, PassThru, Jump",,
+Seq Pedal Mode,4111,,,,"Normal, Trigger, Gate, Trigger+Gate",,
+Sustain Polarity,4112,,,,"Normal, Reversed",,
+Velocity Curve,4113,0,7,1,,,
+Pressure Curve,4114,0,3,1,,,
+Mono/Stereo,4115,,,,"Stereo, Mono",,
+Alternative Tuning,4116,,,,alternative-tunings.csv,,
+MIDI Prog Enable,4118,,,,"Off, On",,
+Multi Mode,4119,,,,"Off, On",,
+Screen Saver,4120,,,,"Off, On",,
+Sustain/Arp,4121,,,,"Arp Hold, Sustain, Arp Hold Mom",,
+Foot Assign,4122,,,,"Breath CC2, Foot CC4, Exp CC11, Volume, LPF Full, LPF Half",,
+MIDI Arp+Seq,4123,,,,"Off, On",,
+Arp Beat Sync,4124,,,,"Off, Quantize",,
+MIDI Prog Send,4125,,,,"Off, On",,
+Save Edit B,4126,,,,"Off, On",,
+Layer A/B Switch,4190,,,,"Layer A, Layer B",,
+Sequencer Record,4192,,,,"Off, On",,

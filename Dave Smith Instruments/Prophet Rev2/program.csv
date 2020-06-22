@@ -1,5 +1,971 @@
 Parameter Name,NRPN Layer A,NRPN Layer B,Min Val,Max Val,Display Offset,Options,Path,Notes
-Osc 1 Freq,0,2048,0,120,,,,
-Osc 1 Freq Fine,1,2049,0,100,,,,
-Osc 1 Shape,2,2050,,,,"Saw, Saw + Tri, Tri, Pulse ",,
+Osc 1 Frequency,0,2048,0,120,,,,Semitones (C0 - C10)
+Osc 1 Frequency Fine,1,2049,0,101,-50,,,Cents
+Osc 1 Shape,2,2050,,,,osc-shapes.csv,,
 Osc 1 Glide,3,2051,0,127,,,,
+Osc 1 Keyboard,4,2052,,,,"Off, On",,
+Osc 2 Frequency,5,2053,0,120,,,,Semitones (C0 - C10)
+Osc 2 Frequency Fine,6,2054,0,101,-50,,,Cents
+Osc 2 Shape,7,2055,,,,osc-shapes.csv,,
+Osc 2 Glide,8,2056,0,127,,,,
+Osc 2 Keyboard,9,2057,,,,"Off, On",,
+Osc Sync,10,2058,,,,"Off, On",,
+Glide Mode,11,2059,,,,glide-modes.csv,,
+Osc Slop,12,2060,0,127,,,,
+Osc 1/2 Mix,13,2061,0,127,,,,
+Noise Level,14,2062,0,127,,,,
+Filter Cutoff,15,2063,0,164,,,,
+Filter Resonance,16,2064,0,127,,,,
+Filter Key Amount,17,2065,0,127,,,,
+Filter Audio Mod,18,2066,0,127,,,,
+Filter Mode,19,2067,,,,filter-modes.csv,,
+Filter Envelope Amount,20,2068,0,254,-127,,,
+Filter Velocity Amount,21,2069,0,127,,,,
+Filter Envelope Delay,22,2070,0,127,,,,
+Filter Envelope Attack,23,2071,0,127,,,,
+Filter Envelope Decay,24,2072,0,127,,,,
+Filter Envelope Sustain,25,2073,0,127,,,,
+Filter Envelope Release,26,2074,0,127,,,,
+Pan Spread,28,2076,0,127,,,,
+Program Volume,29,2077,0,127,,,,
+VCA Envelope Amount,30,2078,0,127,,,,
+VCA Velocity Amount,31,2079,0,127,,,,
+VCA Envelope Delay,32,2080,0,127,,,,
+VCA Envelope Attack,33,2081,0,127,,,,
+VCA Envelope Decay,34,2082,0,127,,,,
+VCA Envelope Sustain,35,2083,0,127,,,,
+VCA Envelope Release,36,2084,0,127,,,,
+LFO 1 Frequency,37,2085,0,150,,,,
+LFO 1 Shape,38,2086,,,,lfo-shapes.csv,,
+LFO 1 Amount,39,2087,0,127,,,,
+LFO 1 Destination,40,2088,,,,mod-destinations-1.csv,,
+LFO 1 Clock Sync,41,2089,,,,"Off, On",,
+LFO 2 Frequency,42,2090,0,150,,,,
+LFO 2 Shape,43,2091,,,,lfo-shapes.csv,,
+LFO 2 Amount,44,2092,0,127,,,,
+LFO 2 Destination,45,2093,,,,mod-destinations-1.csv,,
+LFO 2 Clock Sync,46,2094,,,,"Off, On",,
+LFO 3 Frequency,47,2095,0,150,,,,
+LFO 3 Shape,48,2096,,,,lfo-shapes.csv,,
+LFO 3 Amount,49,2097,0,127,,,,
+LFO 3 Destination,50,2098,,,,mod-destinations-1.csv,,
+LFO 3 Clock Sync,51,2099,,,,"Off, On",,
+LFO 4 Frequency,52,2100,0,150,,,,
+LFO 4 Shape,53,2101,,,,lfo-shapes.csv,,
+LFO 4 Amount,54,2102,0,127,,,,
+LFO 4 Destination,55,2103,,,,mod-destinations-1.csv,,
+LFO 4 Clock Sync,56,2104,,,,"Off, On",,
+Envelope 3 Destination,57,2105,,,,mod-destinations-1.csv,,
+Envelope 3 Amount,58,2106,0,254,-127,,,
+Envelope 3 Velocity,59,2107,0,127,,,,
+Envelope 3 Delay,60,2108,0,127,,,,
+Envelope 3 Attack,61,2109,0,127,,,,
+Envelope 3 Decay,62,2110,0,127,,,,
+Envelope 3 Sustain,63,2111,0,127,,,,
+Envelope 3 Release,64,2112,0,127,,,,
+Mod 1 Source,65,2113,,,,mod-sources.csv,,
+Mod 1 Amount,66,2114,0,254,-127,,,
+Mod 1 Destination,67,2115,,,,mod-destinations-1.csv,,
+Mod 2 Source,68,2116,,,,mod-sources.csv,,
+Mod 2 Amount,69,2117,0,254,-127,,,
+Mod 2 Destination,70,2118,,,,mod-destinations-1.csv,,
+Mod 3 Source,71,2119,,,,mod-sources.csv,,
+Mod 3 Amount,72,2120,0,254,-127,,,
+Mod 3 Destination,73,2121,,,,mod-destinations-1.csv,,
+Mod 4 Source,74,2122,,,,mod-sources.csv,,
+Mod 4 Amount,75,2123,0,254,-127,,,
+Mod 4 Destination,76,2124,,,,mod-destinations-1.csv,,
+Mod 5 Source,77,2125,,,,mod-sources.csv,,
+Mod 5 Amount,78,2126,0,254,-127,,,
+Mod 5 Destination,79,2127,,,,mod-destinations-1.csv,,
+Mod 6 Source,80,2128,,,,mod-sources.csv,,
+Mod 6 Amount,81,2129,0,254,-127,,,
+Mod 6 Destination,82,2130,,,,mod-destinations-1.csv,,
+Mod 7 Source,83,2131,,,,mod-sources.csv,,
+Mod 7 Amount,84,2132,0,254,-127,,,
+Mod 7 Destination,85,2133,,,,mod-destinations-1.csv,,
+Mod 8 Source,86,2134,,,,mod-sources.csv,,
+Mod 8 Amount,87,2135,0,254,-127,,,
+Mod 8 Destination,88,2136,,,,mod-destinations-1.csv,,
+Envelope 3 Repeat,97,2145,,,,"Off, On",,
+VCA Level,98,2146,0,127,,,,
+Osc 1 Note Reset,99,2147,,,,"Off, On",,
+Osc 1 Shape Mod,102,2150,0,99,,,,Percent
+Osc 2 Shape Mod,103,2151,0,99,,,,Percent
+Osc 2 Note Reset,104,2152,,,,"Off, On",,
+LFO 1 Key Sync,105,2153,,,,"Off, On",,
+LFO 2 Key Sync,106,2154,,,,"Off, On",,
+LFO 3 Key Sync,107,2155,,,,"Off, On",,
+LFO 4 Key Sync,108,2156,,,,"Off, On",,
+Sub Octave Level,110,2158,0,127,,,,
+Glide,111,2159,,,,"Off, On",,
+Pitch Bend Range,113,2161,0,12,,,,Semitones
+Pan Mode,114,2162,,,,pan-modes.csv,,
+Mod Wheel Amount,116,2164,0,254,-127,,,
+Mod Wheel Destination,117,2165,,,,mod-destinations-1.csv,,
+Pressure Amount,118,2166,0,254,-127,,,
+Pressure Destination,119,2167,,,,mod-destinations-1.csv,,
+Breath Amount,120,2168,0,254,-127,,,
+Breath Destination,121,2169,,,,mod-destinations-1.csv,,
+Velocity Amount,122,2170,0,254,-127,,,
+Velocity Destination,123,2171,,,,mod-destinations-1.csv,,
+Foot Controller Amount,124,2172,0,254,-127,,,
+Foot Controller Destination,125,2173,,,,mod-destinations-1.csv,,
+FX,153,2201,,,,"Off, On",,
+FX Select,154,2202,,,,fx-types.csv,,
+FX Mix,155,2203,0,127,,,,
+FX Param 1,156,2204,0,255,,,,
+FX Param 2,157,2205,0,127,,,,
+FX Clock Sync,158,2206,,,,"Off, On",,
+A/B Mode,163,,,,,ab-modes.csv,,
+Sequencer Play,164,2212,,,,"Off, On",,
+Unison Detune,167,2215,0,16,,,,
+Unison,168,2216,,,,"Off, On",,
+Unison Mode,169,2217,,,,unison-modes.csv,,
+Keyboard Mode,170,2218,,,,keyboard-modes.csv,,
+Split Point,171,,0,120,,,,Semitones (C-2 - C8)
+Arpeggiator,172,2220,,,,"Off, On",,
+Arpeggiator Mode,173,2221,,,,arpeggiator-modes.csv,,
+Arpeggiator Range,174,2222,,,,arpeggiator-ranges.csv,,
+Clock Divide,175,2223,,,,clock-divisions.csv,,
+Arpeggiator Repeats,177,2225,0,3,,,,
+Arpeggiator Relatch,178,2226,,,,"Off, On",,
+BPM Tempo,179,2227,30,250,,,,
+Gated Sequencer Mode,182,2230,,,,gated-sequencer-modes.csv,,
+Sequencer Type,183,2231,,,,"Gated, Poly",,
+Gated Sequencer Track 1 Destination,184,2232,,,,mod-destinations-1.csv,,
+Gated Sequencer Track 2 Destination,185,2233,,,,mod-destinations-2.csv,,
+Gated Sequencer Track 3 Destination,186,2234,,,,mod-destinations-1.csv,,
+Gated Sequencer Track 4 Destination,187,2235,,,,mod-destinations-2.csv,,
+Gated Sequencer Track 1 Step 1,192,2240,0,127,,,,"126=Reset, 127=Rest"
+Gated Sequencer Track 1 Step 2,193,2241,0,127,,,,"126=Reset, 127=Rest"
+Gated Sequencer Track 1 Step 3,194,2242,0,127,,,,"126=Reset, 127=Rest"
+Gated Sequencer Track 1 Step 4,195,2243,0,127,,,,"126=Reset, 127=Rest"
+Gated Sequencer Track 1 Step 5,196,2244,0,127,,,,"126=Reset, 127=Rest"
+Gated Sequencer Track 1 Step 6,197,2245,0,127,,,,"126=Reset, 127=Rest"
+Gated Sequencer Track 1 Step 7,198,2246,0,127,,,,"126=Reset, 127=Rest"
+Gated Sequencer Track 1 Step 8,199,2247,0,127,,,,"126=Reset, 127=Rest"
+Gated Sequencer Track 1 Step 9,200,2248,0,127,,,,"126=Reset, 127=Rest"
+Gated Sequencer Track 1 Step 10,201,2249,0,127,,,,"126=Reset, 127=Rest"
+Gated Sequencer Track 1 Step 11,202,2250,0,127,,,,"126=Reset, 127=Rest"
+Gated Sequencer Track 1 Step 12,203,2251,0,127,,,,"126=Reset, 127=Rest"
+Gated Sequencer Track 1 Step 13,204,2252,0,127,,,,"126=Reset, 127=Rest"
+Gated Sequencer Track 1 Step 14,205,2253,0,127,,,,"126=Reset, 127=Rest"
+Gated Sequencer Track 1 Step 15,206,2254,0,127,,,,"126=Reset, 127=Rest"
+Gated Sequencer Track 1 Step 16,207,2255,0,127,,,,"126=Reset, 127=Rest"
+Gated Sequencer Track 2 Step 1,208,2256,0,126,,,,126=Reset
+Gated Sequencer Track 2 Step 2,209,2257,0,126,,,,126=Reset
+Gated Sequencer Track 2 Step 3,210,2258,0,126,,,,126=Reset
+Gated Sequencer Track 2 Step 4,211,2259,0,126,,,,126=Reset
+Gated Sequencer Track 2 Step 5,212,2260,0,126,,,,126=Reset
+Gated Sequencer Track 2 Step 6,213,2261,0,126,,,,126=Reset
+Gated Sequencer Track 2 Step 7,214,2262,0,126,,,,126=Reset
+Gated Sequencer Track 2 Step 8,215,2263,0,126,,,,126=Reset
+Gated Sequencer Track 2 Step 9,216,2264,0,126,,,,126=Reset
+Gated Sequencer Track 2 Step 10,217,2265,0,126,,,,126=Reset
+Gated Sequencer Track 2 Step 11,218,2266,0,126,,,,126=Reset
+Gated Sequencer Track 2 Step 12,219,2267,0,126,,,,126=Reset
+Gated Sequencer Track 2 Step 13,220,2268,0,126,,,,126=Reset
+Gated Sequencer Track 2 Step 14,221,2269,0,126,,,,126=Reset
+Gated Sequencer Track 2 Step 15,222,2270,0,126,,,,126=Reset
+Gated Sequencer Track 2 Step 16,223,2271,0,126,,,,126=Reset
+Gated Sequencer Track 3 Step 1,224,2272,0,126,,,,126=Reset
+Gated Sequencer Track 3 Step 2,225,2273,0,126,,,,126=Reset
+Gated Sequencer Track 3 Step 3,226,2274,0,126,,,,126=Reset
+Gated Sequencer Track 3 Step 4,227,2275,0,126,,,,126=Reset
+Gated Sequencer Track 3 Step 5,228,2276,0,126,,,,126=Reset
+Gated Sequencer Track 3 Step 6,229,2277,0,126,,,,126=Reset
+Gated Sequencer Track 3 Step 7,230,2278,0,126,,,,126=Reset
+Gated Sequencer Track 3 Step 8,231,2279,0,126,,,,126=Reset
+Gated Sequencer Track 3 Step 9,232,2280,0,126,,,,126=Reset
+Gated Sequencer Track 3 Step 10,233,2281,0,126,,,,126=Reset
+Gated Sequencer Track 3 Step 11,234,2282,0,126,,,,126=Reset
+Gated Sequencer Track 3 Step 12,235,2283,0,126,,,,126=Reset
+Gated Sequencer Track 3 Step 13,236,2284,0,126,,,,126=Reset
+Gated Sequencer Track 3 Step 14,237,2285,0,126,,,,126=Reset
+Gated Sequencer Track 3 Step 15,238,2286,0,126,,,,126=Reset
+Gated Sequencer Track 3 Step 16,239,2287,0,126,,,,126=Reset
+Gated Sequencer Track 4 Step 1,240,2288,0,126,,,,126=Reset
+Gated Sequencer Track 4 Step 2,241,2289,0,126,,,,126=Reset
+Gated Sequencer Track 4 Step 3,242,2290,0,126,,,,126=Reset
+Gated Sequencer Track 4 Step 4,243,2291,0,126,,,,126=Reset
+Gated Sequencer Track 4 Step 5,244,2292,0,126,,,,126=Reset
+Gated Sequencer Track 4 Step 6,245,2293,0,126,,,,126=Reset
+Gated Sequencer Track 4 Step 7,246,2294,0,126,,,,126=Reset
+Gated Sequencer Track 4 Step 8,247,2295,0,126,,,,126=Reset
+Gated Sequencer Track 4 Step 9,248,2296,0,126,,,,126=Reset
+Gated Sequencer Track 4 Step 10,249,2297,0,126,,,,126=Reset
+Gated Sequencer Track 4 Step 11,250,2298,0,126,,,,126=Reset
+Gated Sequencer Track 4 Step 12,251,2299,0,126,,,,126=Reset
+Gated Sequencer Track 4 Step 13,252,2300,0,126,,,,126=Reset
+Gated Sequencer Track 4 Step 14,253,2301,0,126,,,,126=Reset
+Gated Sequencer Track 4 Step 15,254,2302,0,126,,,,126=Reset
+Gated Sequencer Track 4 Step 16,255,2303,0,126,,,,126=Reset
+Sequencer Step 1 Note 1,276,2324,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 2 Note 1,277,2325,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 3 Note 1,278,2326,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 4 Note 1,279,2327,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 5 Note 1,280,2328,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 6 Note 1,281,2329,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 7 Note 1,282,2330,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 8 Note 1,283,2331,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 9 Note 1,284,2332,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 10 Note 1,285,2333,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 11 Note 1,286,2334,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 12 Note 1,287,2335,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 13 Note 1,288,2336,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 14 Note 1,289,2337,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 15 Note 1,290,2338,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 16 Note 1,291,2339,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 17 Note 1,292,2340,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 18 Note 1,293,2341,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 19 Note 1,294,2342,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 20 Note 1,295,2343,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 21 Note 1,296,2344,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 22 Note 1,297,2345,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 23 Note 1,298,2346,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 24 Note 1,299,2347,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 25 Note 1,300,2348,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 26 Note 1,301,2349,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 27 Note 1,302,2350,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 28 Note 1,303,2351,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 29 Note 1,304,2352,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 30 Note 1,305,2353,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 31 Note 1,306,2354,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 32 Note 1,307,2355,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 33 Note 1,308,2356,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 34 Note 1,309,2357,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 35 Note 1,310,2358,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 36 Note 1,311,2359,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 37 Note 1,312,2360,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 38 Note 1,313,2361,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 39 Note 1,314,2362,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 40 Note 1,315,2363,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 41 Note 1,316,2364,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 42 Note 1,317,2365,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 43 Note 1,318,2366,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 44 Note 1,319,2367,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 45 Note 1,320,2368,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 46 Note 1,321,2369,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 47 Note 1,322,2370,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 48 Note 1,323,2371,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 49 Note 1,324,2372,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 50 Note 1,325,2373,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 51 Note 1,326,2374,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 52 Note 1,327,2375,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 53 Note 1,328,2376,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 54 Note 1,329,2377,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 55 Note 1,330,2378,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 56 Note 1,331,2379,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 57 Note 1,332,2380,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 58 Note 1,333,2381,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 59 Note 1,334,2382,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 60 Note 1,335,2383,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 61 Note 1,336,2384,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 62 Note 1,337,2385,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 63 Note 1,338,2386,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 64 Note 1,339,2387,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 1 Velocity 1,340,2388,128,255,,,,128=Rest
+Sequencer Step 2 Velocity 1,341,2389,128,255,,,,128=Rest
+Sequencer Step 3 Velocity 1,342,2390,128,255,,,,128=Rest
+Sequencer Step 4 Velocity 1,343,2391,128,255,,,,128=Rest
+Sequencer Step 5 Velocity 1,344,2392,128,255,,,,128=Rest
+Sequencer Step 6 Velocity 1,345,2393,128,255,,,,128=Rest
+Sequencer Step 7 Velocity 1,346,2394,128,255,,,,128=Rest
+Sequencer Step 8 Velocity 1,347,2395,128,255,,,,128=Rest
+Sequencer Step 9 Velocity 1,348,2396,128,255,,,,128=Rest
+Sequencer Step 10 Velocity 1,349,2397,128,255,,,,128=Rest
+Sequencer Step 11 Velocity 1,350,2398,128,255,,,,128=Rest
+Sequencer Step 12 Velocity 1,351,2399,128,255,,,,128=Rest
+Sequencer Step 13 Velocity 1,352,2400,128,255,,,,128=Rest
+Sequencer Step 14 Velocity 1,353,2401,128,255,,,,128=Rest
+Sequencer Step 15 Velocity 1,354,2402,128,255,,,,128=Rest
+Sequencer Step 16 Velocity 1,355,2403,128,255,,,,128=Rest
+Sequencer Step 17 Velocity 1,356,2404,128,255,,,,128=Rest
+Sequencer Step 18 Velocity 1,357,2405,128,255,,,,128=Rest
+Sequencer Step 19 Velocity 1,358,2406,128,255,,,,128=Rest
+Sequencer Step 20 Velocity 1,359,2407,128,255,,,,128=Rest
+Sequencer Step 21 Velocity 1,360,2408,128,255,,,,128=Rest
+Sequencer Step 22 Velocity 1,361,2409,128,255,,,,128=Rest
+Sequencer Step 23 Velocity 1,362,2410,128,255,,,,128=Rest
+Sequencer Step 24 Velocity 1,363,2411,128,255,,,,128=Rest
+Sequencer Step 25 Velocity 1,364,2412,128,255,,,,128=Rest
+Sequencer Step 26 Velocity 1,365,2413,128,255,,,,128=Rest
+Sequencer Step 27 Velocity 1,366,2414,128,255,,,,128=Rest
+Sequencer Step 28 Velocity 1,367,2415,128,255,,,,128=Rest
+Sequencer Step 29 Velocity 1,368,2416,128,255,,,,128=Rest
+Sequencer Step 30 Velocity 1,369,2417,128,255,,,,128=Rest
+Sequencer Step 31 Velocity 1,370,2418,128,255,,,,128=Rest
+Sequencer Step 32 Velocity 1,371,2419,128,255,,,,128=Rest
+Sequencer Step 33 Velocity 1,372,2420,128,255,,,,128=Rest
+Sequencer Step 34 Velocity 1,373,2421,128,255,,,,128=Rest
+Sequencer Step 35 Velocity 1,374,2422,128,255,,,,128=Rest
+Sequencer Step 36 Velocity 1,375,2423,128,255,,,,128=Rest
+Sequencer Step 37 Velocity 1,376,2424,128,255,,,,128=Rest
+Sequencer Step 38 Velocity 1,377,2425,128,255,,,,128=Rest
+Sequencer Step 39 Velocity 1,378,2426,128,255,,,,128=Rest
+Sequencer Step 40 Velocity 1,379,2427,128,255,,,,128=Rest
+Sequencer Step 41 Velocity 1,380,2428,128,255,,,,128=Rest
+Sequencer Step 42 Velocity 1,381,2429,128,255,,,,128=Rest
+Sequencer Step 43 Velocity 1,382,2430,128,255,,,,128=Rest
+Sequencer Step 44 Velocity 1,383,2431,128,255,,,,128=Rest
+Sequencer Step 45 Velocity 1,384,2432,128,255,,,,128=Rest
+Sequencer Step 46 Velocity 1,385,2433,128,255,,,,128=Rest
+Sequencer Step 47 Velocity 1,386,2434,128,255,,,,128=Rest
+Sequencer Step 48 Velocity 1,387,2435,128,255,,,,128=Rest
+Sequencer Step 49 Velocity 1,388,2436,128,255,,,,128=Rest
+Sequencer Step 50 Velocity 1,389,2437,128,255,,,,128=Rest
+Sequencer Step 51 Velocity 1,390,2438,128,255,,,,128=Rest
+Sequencer Step 52 Velocity 1,391,2439,128,255,,,,128=Rest
+Sequencer Step 53 Velocity 1,392,2440,128,255,,,,128=Rest
+Sequencer Step 54 Velocity 1,393,2441,128,255,,,,128=Rest
+Sequencer Step 55 Velocity 1,394,2442,128,255,,,,128=Rest
+Sequencer Step 56 Velocity 1,395,2443,128,255,,,,128=Rest
+Sequencer Step 57 Velocity 1,396,2444,128,255,,,,128=Rest
+Sequencer Step 58 Velocity 1,397,2445,128,255,,,,128=Rest
+Sequencer Step 59 Velocity 1,398,2446,128,255,,,,128=Rest
+Sequencer Step 60 Velocity 1,399,2447,128,255,,,,128=Rest
+Sequencer Step 61 Velocity 1,400,2448,128,255,,,,128=Rest
+Sequencer Step 62 Velocity 1,401,2449,128,255,,,,128=Rest
+Sequencer Step 63 Velocity 1,402,2450,128,255,,,,128=Rest
+Sequencer Step 64 Velocity 1,403,2451,128,255,,,,128=Rest
+Sequencer Step 1 Note 2,404,2452,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 2 Note 2,405,2453,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 3 Note 2,406,2454,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 4 Note 2,407,2455,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 5 Note 2,408,2456,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 6 Note 2,409,2457,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 7 Note 2,410,2458,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 8 Note 2,411,2459,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 9 Note 2,412,2460,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 10 Note 2,413,2461,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 11 Note 2,414,2462,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 12 Note 2,415,2463,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 13 Note 2,416,2464,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 14 Note 2,417,2465,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 15 Note 2,418,2466,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 16 Note 2,419,2467,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 17 Note 2,420,2468,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 18 Note 2,421,2469,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 19 Note 2,422,2470,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 20 Note 2,423,2471,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 21 Note 2,424,2472,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 22 Note 2,425,2473,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 23 Note 2,426,2474,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 24 Note 2,427,2475,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 25 Note 2,428,2476,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 26 Note 2,429,2477,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 27 Note 2,430,2478,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 28 Note 2,431,2479,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 29 Note 2,432,2480,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 30 Note 2,433,2481,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 31 Note 2,434,2482,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 32 Note 2,435,2483,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 33 Note 2,436,2484,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 34 Note 2,437,2485,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 35 Note 2,438,2486,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 36 Note 2,439,2487,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 37 Note 2,440,2488,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 38 Note 2,441,2489,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 39 Note 2,442,2490,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 40 Note 2,443,2491,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 41 Note 2,444,2492,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 42 Note 2,445,2493,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 43 Note 2,446,2494,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 44 Note 2,447,2495,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 45 Note 2,448,2496,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 46 Note 2,449,2497,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 47 Note 2,450,2498,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 48 Note 2,451,2499,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 49 Note 2,452,2500,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 50 Note 2,453,2501,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 51 Note 2,454,2502,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 52 Note 2,455,2503,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 53 Note 2,456,2504,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 54 Note 2,457,2505,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 55 Note 2,458,2506,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 56 Note 2,459,2507,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 57 Note 2,460,2508,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 58 Note 2,461,2509,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 59 Note 2,462,2510,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 60 Note 2,463,2511,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 61 Note 2,464,2512,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 62 Note 2,465,2513,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 63 Note 2,466,2514,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 64 Note 2,467,2515,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 1 Velocity 2,468,2516,128,255,,,,128=Rest
+Sequencer Step 2 Velocity 2,469,2517,128,255,,,,128=Rest
+Sequencer Step 3 Velocity 2,470,2518,128,255,,,,128=Rest
+Sequencer Step 4 Velocity 2,471,2519,128,255,,,,128=Rest
+Sequencer Step 5 Velocity 2,472,2520,128,255,,,,128=Rest
+Sequencer Step 6 Velocity 2,473,2521,128,255,,,,128=Rest
+Sequencer Step 7 Velocity 2,474,2522,128,255,,,,128=Rest
+Sequencer Step 8 Velocity 2,475,2523,128,255,,,,128=Rest
+Sequencer Step 9 Velocity 2,476,2524,128,255,,,,128=Rest
+Sequencer Step 10 Velocity 2,477,2525,128,255,,,,128=Rest
+Sequencer Step 11 Velocity 2,478,2526,128,255,,,,128=Rest
+Sequencer Step 12 Velocity 2,479,2527,128,255,,,,128=Rest
+Sequencer Step 13 Velocity 2,480,2528,128,255,,,,128=Rest
+Sequencer Step 14 Velocity 2,481,2529,128,255,,,,128=Rest
+Sequencer Step 15 Velocity 2,482,2530,128,255,,,,128=Rest
+Sequencer Step 16 Velocity 2,483,2531,128,255,,,,128=Rest
+Sequencer Step 17 Velocity 2,484,2532,128,255,,,,128=Rest
+Sequencer Step 18 Velocity 2,485,2533,128,255,,,,128=Rest
+Sequencer Step 19 Velocity 2,486,2534,128,255,,,,128=Rest
+Sequencer Step 20 Velocity 2,487,2535,128,255,,,,128=Rest
+Sequencer Step 21 Velocity 2,488,2536,128,255,,,,128=Rest
+Sequencer Step 22 Velocity 2,489,2537,128,255,,,,128=Rest
+Sequencer Step 23 Velocity 2,490,2538,128,255,,,,128=Rest
+Sequencer Step 24 Velocity 2,491,2539,128,255,,,,128=Rest
+Sequencer Step 25 Velocity 2,492,2540,128,255,,,,128=Rest
+Sequencer Step 26 Velocity 2,493,2541,128,255,,,,128=Rest
+Sequencer Step 27 Velocity 2,494,2542,128,255,,,,128=Rest
+Sequencer Step 28 Velocity 2,495,2543,128,255,,,,128=Rest
+Sequencer Step 29 Velocity 2,496,2544,128,255,,,,128=Rest
+Sequencer Step 30 Velocity 2,497,2545,128,255,,,,128=Rest
+Sequencer Step 31 Velocity 2,498,2546,128,255,,,,128=Rest
+Sequencer Step 32 Velocity 2,499,2547,128,255,,,,128=Rest
+Sequencer Step 33 Velocity 2,500,2548,128,255,,,,128=Rest
+Sequencer Step 34 Velocity 2,501,2549,128,255,,,,128=Rest
+Sequencer Step 35 Velocity 2,502,2550,128,255,,,,128=Rest
+Sequencer Step 36 Velocity 2,503,2551,128,255,,,,128=Rest
+Sequencer Step 37 Velocity 2,504,2552,128,255,,,,128=Rest
+Sequencer Step 38 Velocity 2,505,2553,128,255,,,,128=Rest
+Sequencer Step 39 Velocity 2,506,2554,128,255,,,,128=Rest
+Sequencer Step 40 Velocity 2,507,2555,128,255,,,,128=Rest
+Sequencer Step 41 Velocity 2,508,2556,128,255,,,,128=Rest
+Sequencer Step 42 Velocity 2,509,2557,128,255,,,,128=Rest
+Sequencer Step 43 Velocity 2,510,2558,128,255,,,,128=Rest
+Sequencer Step 44 Velocity 2,511,2559,128,255,,,,128=Rest
+Sequencer Step 45 Velocity 2,512,2560,128,255,,,,128=Rest
+Sequencer Step 46 Velocity 2,513,2561,128,255,,,,128=Rest
+Sequencer Step 47 Velocity 2,514,2562,128,255,,,,128=Rest
+Sequencer Step 48 Velocity 2,515,2563,128,255,,,,128=Rest
+Sequencer Step 49 Velocity 2,516,2564,128,255,,,,128=Rest
+Sequencer Step 50 Velocity 2,517,2565,128,255,,,,128=Rest
+Sequencer Step 51 Velocity 2,518,2566,128,255,,,,128=Rest
+Sequencer Step 52 Velocity 2,519,2567,128,255,,,,128=Rest
+Sequencer Step 53 Velocity 2,520,2568,128,255,,,,128=Rest
+Sequencer Step 54 Velocity 2,521,2569,128,255,,,,128=Rest
+Sequencer Step 55 Velocity 2,522,2570,128,255,,,,128=Rest
+Sequencer Step 56 Velocity 2,523,2571,128,255,,,,128=Rest
+Sequencer Step 57 Velocity 2,524,2572,128,255,,,,128=Rest
+Sequencer Step 58 Velocity 2,525,2573,128,255,,,,128=Rest
+Sequencer Step 59 Velocity 2,526,2574,128,255,,,,128=Rest
+Sequencer Step 60 Velocity 2,527,2575,128,255,,,,128=Rest
+Sequencer Step 61 Velocity 2,528,2576,128,255,,,,128=Rest
+Sequencer Step 62 Velocity 2,529,2577,128,255,,,,128=Rest
+Sequencer Step 63 Velocity 2,530,2578,128,255,,,,128=Rest
+Sequencer Step 64 Velocity 2,531,2579,128,255,,,,128=Rest
+Sequencer Step 1 Note 3,532,2580,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 2 Note 3,533,2581,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 3 Note 3,534,2582,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 4 Note 3,535,2583,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 5 Note 3,536,2584,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 6 Note 3,537,2585,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 7 Note 3,538,2586,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 8 Note 3,539,2587,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 9 Note 3,540,2588,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 10 Note 3,541,2589,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 11 Note 3,542,2590,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 12 Note 3,543,2591,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 13 Note 3,544,2592,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 14 Note 3,545,2593,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 15 Note 3,546,2594,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 16 Note 3,547,2595,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 17 Note 3,548,2596,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 18 Note 3,549,2597,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 19 Note 3,550,2598,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 20 Note 3,551,2599,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 21 Note 3,552,2600,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 22 Note 3,553,2601,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 23 Note 3,554,2602,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 24 Note 3,555,2603,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 25 Note 3,556,2604,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 26 Note 3,557,2605,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 27 Note 3,558,2606,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 28 Note 3,559,2607,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 29 Note 3,560,2608,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 30 Note 3,561,2609,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 31 Note 3,562,2610,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 32 Note 3,563,2611,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 33 Note 3,564,2612,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 34 Note 3,565,2613,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 35 Note 3,566,2614,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 36 Note 3,567,2615,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 37 Note 3,568,2616,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 38 Note 3,569,2617,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 39 Note 3,570,2618,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 40 Note 3,571,2619,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 41 Note 3,572,2620,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 42 Note 3,573,2621,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 43 Note 3,574,2622,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 44 Note 3,575,2623,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 45 Note 3,576,2624,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 46 Note 3,577,2625,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 47 Note 3,578,2626,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 48 Note 3,579,2627,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 49 Note 3,580,2628,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 50 Note 3,581,2629,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 51 Note 3,582,2630,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 52 Note 3,583,2631,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 53 Note 3,584,2632,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 54 Note 3,585,2633,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 55 Note 3,586,2634,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 56 Note 3,587,2635,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 57 Note 3,588,2636,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 58 Note 3,589,2637,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 59 Note 3,590,2638,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 60 Note 3,591,2639,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 61 Note 3,592,2640,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 62 Note 3,593,2641,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 63 Note 3,594,2642,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 64 Note 3,595,2643,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 1 Velocity 3,596,2644,128,255,,,,128=Rest
+Sequencer Step 2 Velocity 3,597,2645,128,255,,,,128=Rest
+Sequencer Step 3 Velocity 3,598,2646,128,255,,,,128=Rest
+Sequencer Step 4 Velocity 3,599,2647,128,255,,,,128=Rest
+Sequencer Step 5 Velocity 3,600,2648,128,255,,,,128=Rest
+Sequencer Step 6 Velocity 3,601,2649,128,255,,,,128=Rest
+Sequencer Step 7 Velocity 3,602,2650,128,255,,,,128=Rest
+Sequencer Step 8 Velocity 3,603,2651,128,255,,,,128=Rest
+Sequencer Step 9 Velocity 3,604,2652,128,255,,,,128=Rest
+Sequencer Step 10 Velocity 3,605,2653,128,255,,,,128=Rest
+Sequencer Step 11 Velocity 3,606,2654,128,255,,,,128=Rest
+Sequencer Step 12 Velocity 3,607,2655,128,255,,,,128=Rest
+Sequencer Step 13 Velocity 3,608,2656,128,255,,,,128=Rest
+Sequencer Step 14 Velocity 3,609,2657,128,255,,,,128=Rest
+Sequencer Step 15 Velocity 3,610,2658,128,255,,,,128=Rest
+Sequencer Step 16 Velocity 3,611,2659,128,255,,,,128=Rest
+Sequencer Step 17 Velocity 3,612,2660,128,255,,,,128=Rest
+Sequencer Step 18 Velocity 3,613,2661,128,255,,,,128=Rest
+Sequencer Step 19 Velocity 3,614,2662,128,255,,,,128=Rest
+Sequencer Step 20 Velocity 3,615,2663,128,255,,,,128=Rest
+Sequencer Step 21 Velocity 3,616,2664,128,255,,,,128=Rest
+Sequencer Step 22 Velocity 3,617,2665,128,255,,,,128=Rest
+Sequencer Step 23 Velocity 3,618,2666,128,255,,,,128=Rest
+Sequencer Step 24 Velocity 3,619,2667,128,255,,,,128=Rest
+Sequencer Step 25 Velocity 3,620,2668,128,255,,,,128=Rest
+Sequencer Step 26 Velocity 3,621,2669,128,255,,,,128=Rest
+Sequencer Step 27 Velocity 3,622,2670,128,255,,,,128=Rest
+Sequencer Step 28 Velocity 3,623,2671,128,255,,,,128=Rest
+Sequencer Step 29 Velocity 3,624,2672,128,255,,,,128=Rest
+Sequencer Step 30 Velocity 3,625,2673,128,255,,,,128=Rest
+Sequencer Step 31 Velocity 3,626,2674,128,255,,,,128=Rest
+Sequencer Step 32 Velocity 3,627,2675,128,255,,,,128=Rest
+Sequencer Step 33 Velocity 3,628,2676,128,255,,,,128=Rest
+Sequencer Step 34 Velocity 3,629,2677,128,255,,,,128=Rest
+Sequencer Step 35 Velocity 3,630,2678,128,255,,,,128=Rest
+Sequencer Step 36 Velocity 3,631,2679,128,255,,,,128=Rest
+Sequencer Step 37 Velocity 3,632,2680,128,255,,,,128=Rest
+Sequencer Step 38 Velocity 3,633,2681,128,255,,,,128=Rest
+Sequencer Step 39 Velocity 3,634,2682,128,255,,,,128=Rest
+Sequencer Step 40 Velocity 3,635,2683,128,255,,,,128=Rest
+Sequencer Step 41 Velocity 3,636,2684,128,255,,,,128=Rest
+Sequencer Step 42 Velocity 3,637,2685,128,255,,,,128=Rest
+Sequencer Step 43 Velocity 3,638,2686,128,255,,,,128=Rest
+Sequencer Step 44 Velocity 3,639,2687,128,255,,,,128=Rest
+Sequencer Step 45 Velocity 3,640,2688,128,255,,,,128=Rest
+Sequencer Step 46 Velocity 3,641,2689,128,255,,,,128=Rest
+Sequencer Step 47 Velocity 3,642,2690,128,255,,,,128=Rest
+Sequencer Step 48 Velocity 3,643,2691,128,255,,,,128=Rest
+Sequencer Step 49 Velocity 3,644,2692,128,255,,,,128=Rest
+Sequencer Step 50 Velocity 3,645,2693,128,255,,,,128=Rest
+Sequencer Step 51 Velocity 3,646,2694,128,255,,,,128=Rest
+Sequencer Step 52 Velocity 3,647,2695,128,255,,,,128=Rest
+Sequencer Step 53 Velocity 3,648,2696,128,255,,,,128=Rest
+Sequencer Step 54 Velocity 3,649,2697,128,255,,,,128=Rest
+Sequencer Step 55 Velocity 3,650,2698,128,255,,,,128=Rest
+Sequencer Step 56 Velocity 3,651,2699,128,255,,,,128=Rest
+Sequencer Step 57 Velocity 3,652,2700,128,255,,,,128=Rest
+Sequencer Step 58 Velocity 3,653,2701,128,255,,,,128=Rest
+Sequencer Step 59 Velocity 3,654,2702,128,255,,,,128=Rest
+Sequencer Step 60 Velocity 3,655,2703,128,255,,,,128=Rest
+Sequencer Step 61 Velocity 3,656,2704,128,255,,,,128=Rest
+Sequencer Step 62 Velocity 3,657,2705,128,255,,,,128=Rest
+Sequencer Step 63 Velocity 3,658,2706,128,255,,,,128=Rest
+Sequencer Step 64 Velocity 3,659,2707,128,255,,,,128=Rest
+Sequencer Step 1 Note 4,660,2708,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 2 Note 4,661,2709,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 3 Note 4,662,2710,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 4 Note 4,663,2711,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 5 Note 4,664,2712,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 6 Note 4,665,2713,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 7 Note 4,666,2714,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 8 Note 4,667,2715,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 9 Note 4,668,2716,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 10 Note 4,669,2717,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 11 Note 4,670,2718,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 12 Note 4,671,2719,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 13 Note 4,672,2720,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 14 Note 4,673,2721,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 15 Note 4,674,2722,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 16 Note 4,675,2723,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 17 Note 4,676,2724,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 18 Note 4,677,2725,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 19 Note 4,678,2726,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 20 Note 4,679,2727,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 21 Note 4,680,2728,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 22 Note 4,681,2729,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 23 Note 4,682,2730,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 24 Note 4,683,2731,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 25 Note 4,684,2732,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 26 Note 4,685,2733,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 27 Note 4,686,2734,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 28 Note 4,687,2735,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 29 Note 4,688,2736,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 30 Note 4,689,2737,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 31 Note 4,690,2738,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 32 Note 4,691,2739,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 33 Note 4,692,2740,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 34 Note 4,693,2741,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 35 Note 4,694,2742,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 36 Note 4,695,2743,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 37 Note 4,696,2744,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 38 Note 4,697,2745,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 39 Note 4,698,2746,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 40 Note 4,699,2747,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 41 Note 4,700,2748,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 42 Note 4,701,2749,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 43 Note 4,702,2750,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 44 Note 4,703,2751,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 45 Note 4,704,2752,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 46 Note 4,705,2753,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 47 Note 4,706,2754,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 48 Note 4,707,2755,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 49 Note 4,708,2756,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 50 Note 4,709,2757,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 51 Note 4,710,2758,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 52 Note 4,711,2759,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 53 Note 4,712,2760,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 54 Note 4,713,2761,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 55 Note 4,714,2762,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 56 Note 4,715,2763,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 57 Note 4,716,2764,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 58 Note 4,717,2765,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 59 Note 4,718,2766,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 60 Note 4,719,2767,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 61 Note 4,720,2768,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 62 Note 4,721,2769,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 63 Note 4,722,2770,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 64 Note 4,723,2771,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 1 Velocity 4,724,2772,128,255,,,,128=Rest
+Sequencer Step 2 Velocity 4,725,2773,128,255,,,,128=Rest
+Sequencer Step 3 Velocity 4,726,2774,128,255,,,,128=Rest
+Sequencer Step 4 Velocity 4,727,2775,128,255,,,,128=Rest
+Sequencer Step 5 Velocity 4,728,2776,128,255,,,,128=Rest
+Sequencer Step 6 Velocity 4,729,2777,128,255,,,,128=Rest
+Sequencer Step 7 Velocity 4,730,2778,128,255,,,,128=Rest
+Sequencer Step 8 Velocity 4,731,2779,128,255,,,,128=Rest
+Sequencer Step 9 Velocity 4,732,2780,128,255,,,,128=Rest
+Sequencer Step 10 Velocity 4,733,2781,128,255,,,,128=Rest
+Sequencer Step 11 Velocity 4,734,2782,128,255,,,,128=Rest
+Sequencer Step 12 Velocity 4,735,2783,128,255,,,,128=Rest
+Sequencer Step 13 Velocity 4,736,2784,128,255,,,,128=Rest
+Sequencer Step 14 Velocity 4,737,2785,128,255,,,,128=Rest
+Sequencer Step 15 Velocity 4,738,2786,128,255,,,,128=Rest
+Sequencer Step 16 Velocity 4,739,2787,128,255,,,,128=Rest
+Sequencer Step 17 Velocity 4,740,2788,128,255,,,,128=Rest
+Sequencer Step 18 Velocity 4,741,2789,128,255,,,,128=Rest
+Sequencer Step 19 Velocity 4,742,2790,128,255,,,,128=Rest
+Sequencer Step 20 Velocity 4,743,2791,128,255,,,,128=Rest
+Sequencer Step 21 Velocity 4,744,2792,128,255,,,,128=Rest
+Sequencer Step 22 Velocity 4,745,2793,128,255,,,,128=Rest
+Sequencer Step 23 Velocity 4,746,2794,128,255,,,,128=Rest
+Sequencer Step 24 Velocity 4,747,2795,128,255,,,,128=Rest
+Sequencer Step 25 Velocity 4,748,2796,128,255,,,,128=Rest
+Sequencer Step 26 Velocity 4,749,2797,128,255,,,,128=Rest
+Sequencer Step 27 Velocity 4,750,2798,128,255,,,,128=Rest
+Sequencer Step 28 Velocity 4,751,2799,128,255,,,,128=Rest
+Sequencer Step 29 Velocity 4,752,2800,128,255,,,,128=Rest
+Sequencer Step 30 Velocity 4,753,2801,128,255,,,,128=Rest
+Sequencer Step 31 Velocity 4,754,2802,128,255,,,,128=Rest
+Sequencer Step 32 Velocity 4,755,2803,128,255,,,,128=Rest
+Sequencer Step 33 Velocity 4,756,2804,128,255,,,,128=Rest
+Sequencer Step 34 Velocity 4,757,2805,128,255,,,,128=Rest
+Sequencer Step 35 Velocity 4,758,2806,128,255,,,,128=Rest
+Sequencer Step 36 Velocity 4,759,2807,128,255,,,,128=Rest
+Sequencer Step 37 Velocity 4,760,2808,128,255,,,,128=Rest
+Sequencer Step 38 Velocity 4,761,2809,128,255,,,,128=Rest
+Sequencer Step 39 Velocity 4,762,2810,128,255,,,,128=Rest
+Sequencer Step 40 Velocity 4,763,2811,128,255,,,,128=Rest
+Sequencer Step 41 Velocity 4,764,2812,128,255,,,,128=Rest
+Sequencer Step 42 Velocity 4,765,2813,128,255,,,,128=Rest
+Sequencer Step 43 Velocity 4,766,2814,128,255,,,,128=Rest
+Sequencer Step 44 Velocity 4,767,2815,128,255,,,,128=Rest
+Sequencer Step 45 Velocity 4,768,2816,128,255,,,,128=Rest
+Sequencer Step 46 Velocity 4,769,2817,128,255,,,,128=Rest
+Sequencer Step 47 Velocity 4,770,2818,128,255,,,,128=Rest
+Sequencer Step 48 Velocity 4,771,2819,128,255,,,,128=Rest
+Sequencer Step 49 Velocity 4,772,2820,128,255,,,,128=Rest
+Sequencer Step 50 Velocity 4,773,2821,128,255,,,,128=Rest
+Sequencer Step 51 Velocity 4,774,2822,128,255,,,,128=Rest
+Sequencer Step 52 Velocity 4,775,2823,128,255,,,,128=Rest
+Sequencer Step 53 Velocity 4,776,2824,128,255,,,,128=Rest
+Sequencer Step 54 Velocity 4,777,2825,128,255,,,,128=Rest
+Sequencer Step 55 Velocity 4,778,2826,128,255,,,,128=Rest
+Sequencer Step 56 Velocity 4,779,2827,128,255,,,,128=Rest
+Sequencer Step 57 Velocity 4,780,2828,128,255,,,,128=Rest
+Sequencer Step 58 Velocity 4,781,2829,128,255,,,,128=Rest
+Sequencer Step 59 Velocity 4,782,2830,128,255,,,,128=Rest
+Sequencer Step 60 Velocity 4,783,2831,128,255,,,,128=Rest
+Sequencer Step 61 Velocity 4,784,2832,128,255,,,,128=Rest
+Sequencer Step 62 Velocity 4,785,2833,128,255,,,,128=Rest
+Sequencer Step 63 Velocity 4,786,2834,128,255,,,,128=Rest
+Sequencer Step 64 Velocity 4,787,2835,128,255,,,,128=Rest
+Sequencer Step 1 Note 5,788,2836,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 2 Note 5,789,2837,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 3 Note 5,790,2838,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 4 Note 5,791,2839,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 5 Note 5,792,2840,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 6 Note 5,793,2841,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 7 Note 5,794,2842,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 8 Note 5,795,2843,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 9 Note 5,796,2844,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 10 Note 5,797,2845,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 11 Note 5,798,2846,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 12 Note 5,799,2847,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 13 Note 5,800,2848,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 14 Note 5,801,2849,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 15 Note 5,802,2850,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 16 Note 5,803,2851,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 17 Note 5,804,2852,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 18 Note 5,805,2853,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 19 Note 5,806,2854,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 20 Note 5,807,2855,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 21 Note 5,808,2856,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 22 Note 5,809,2857,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 23 Note 5,810,2858,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 24 Note 5,811,2859,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 25 Note 5,812,2860,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 26 Note 5,813,2861,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 27 Note 5,814,2862,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 28 Note 5,815,2863,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 29 Note 5,816,2864,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 30 Note 5,817,2865,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 31 Note 5,818,2866,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 32 Note 5,819,2867,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 33 Note 5,820,2868,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 34 Note 5,821,2869,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 35 Note 5,822,2870,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 36 Note 5,823,2871,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 37 Note 5,824,2872,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 38 Note 5,825,2873,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 39 Note 5,826,2874,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 40 Note 5,827,2875,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 41 Note 5,828,2876,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 42 Note 5,829,2877,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 43 Note 5,830,2878,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 44 Note 5,831,2879,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 45 Note 5,832,2880,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 46 Note 5,833,2881,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 47 Note 5,834,2882,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 48 Note 5,835,2883,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 49 Note 5,836,2884,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 50 Note 5,837,2885,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 51 Note 5,838,2886,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 52 Note 5,839,2887,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 53 Note 5,840,2888,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 54 Note 5,841,2889,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 55 Note 5,842,2890,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 56 Note 5,843,2891,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 57 Note 5,844,2892,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 58 Note 5,845,2893,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 59 Note 5,846,2894,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 60 Note 5,847,2895,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 61 Note 5,848,2896,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 62 Note 5,849,2897,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 63 Note 5,850,2898,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 64 Note 5,851,2899,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 1 Velocity 5,852,2900,128,255,,,,128=Rest
+Sequencer Step 2 Velocity 5,853,2901,128,255,,,,128=Rest
+Sequencer Step 3 Velocity 5,854,2902,128,255,,,,128=Rest
+Sequencer Step 4 Velocity 5,855,2903,128,255,,,,128=Rest
+Sequencer Step 5 Velocity 5,856,2904,128,255,,,,128=Rest
+Sequencer Step 6 Velocity 5,857,2905,128,255,,,,128=Rest
+Sequencer Step 7 Velocity 5,858,2906,128,255,,,,128=Rest
+Sequencer Step 8 Velocity 5,859,2907,128,255,,,,128=Rest
+Sequencer Step 9 Velocity 5,860,2908,128,255,,,,128=Rest
+Sequencer Step 10 Velocity 5,861,2909,128,255,,,,128=Rest
+Sequencer Step 11 Velocity 5,862,2910,128,255,,,,128=Rest
+Sequencer Step 12 Velocity 5,863,2911,128,255,,,,128=Rest
+Sequencer Step 13 Velocity 5,864,2912,128,255,,,,128=Rest
+Sequencer Step 14 Velocity 5,865,2913,128,255,,,,128=Rest
+Sequencer Step 15 Velocity 5,866,2914,128,255,,,,128=Rest
+Sequencer Step 16 Velocity 5,867,2915,128,255,,,,128=Rest
+Sequencer Step 17 Velocity 5,868,2916,128,255,,,,128=Rest
+Sequencer Step 18 Velocity 5,869,2917,128,255,,,,128=Rest
+Sequencer Step 19 Velocity 5,870,2918,128,255,,,,128=Rest
+Sequencer Step 20 Velocity 5,871,2919,128,255,,,,128=Rest
+Sequencer Step 21 Velocity 5,872,2920,128,255,,,,128=Rest
+Sequencer Step 22 Velocity 5,873,2921,128,255,,,,128=Rest
+Sequencer Step 23 Velocity 5,874,2922,128,255,,,,128=Rest
+Sequencer Step 24 Velocity 5,875,2923,128,255,,,,128=Rest
+Sequencer Step 25 Velocity 5,876,2924,128,255,,,,128=Rest
+Sequencer Step 26 Velocity 5,877,2925,128,255,,,,128=Rest
+Sequencer Step 27 Velocity 5,878,2926,128,255,,,,128=Rest
+Sequencer Step 28 Velocity 5,879,2927,128,255,,,,128=Rest
+Sequencer Step 29 Velocity 5,880,2928,128,255,,,,128=Rest
+Sequencer Step 30 Velocity 5,881,2929,128,255,,,,128=Rest
+Sequencer Step 31 Velocity 5,882,2930,128,255,,,,128=Rest
+Sequencer Step 32 Velocity 5,883,2931,128,255,,,,128=Rest
+Sequencer Step 33 Velocity 5,884,2932,128,255,,,,128=Rest
+Sequencer Step 34 Velocity 5,885,2933,128,255,,,,128=Rest
+Sequencer Step 35 Velocity 5,886,2934,128,255,,,,128=Rest
+Sequencer Step 36 Velocity 5,887,2935,128,255,,,,128=Rest
+Sequencer Step 37 Velocity 5,888,2936,128,255,,,,128=Rest
+Sequencer Step 38 Velocity 5,889,2937,128,255,,,,128=Rest
+Sequencer Step 39 Velocity 5,890,2938,128,255,,,,128=Rest
+Sequencer Step 40 Velocity 5,891,2939,128,255,,,,128=Rest
+Sequencer Step 41 Velocity 5,892,2940,128,255,,,,128=Rest
+Sequencer Step 42 Velocity 5,893,2941,128,255,,,,128=Rest
+Sequencer Step 43 Velocity 5,894,2942,128,255,,,,128=Rest
+Sequencer Step 44 Velocity 5,895,2943,128,255,,,,128=Rest
+Sequencer Step 45 Velocity 5,896,2944,128,255,,,,128=Rest
+Sequencer Step 46 Velocity 5,897,2945,128,255,,,,128=Rest
+Sequencer Step 47 Velocity 5,898,2946,128,255,,,,128=Rest
+Sequencer Step 48 Velocity 5,899,2947,128,255,,,,128=Rest
+Sequencer Step 49 Velocity 5,900,2948,128,255,,,,128=Rest
+Sequencer Step 50 Velocity 5,901,2949,128,255,,,,128=Rest
+Sequencer Step 51 Velocity 5,902,2950,128,255,,,,128=Rest
+Sequencer Step 52 Velocity 5,903,2951,128,255,,,,128=Rest
+Sequencer Step 53 Velocity 5,904,2952,128,255,,,,128=Rest
+Sequencer Step 54 Velocity 5,905,2953,128,255,,,,128=Rest
+Sequencer Step 55 Velocity 5,906,2954,128,255,,,,128=Rest
+Sequencer Step 56 Velocity 5,907,2955,128,255,,,,128=Rest
+Sequencer Step 57 Velocity 5,908,2956,128,255,,,,128=Rest
+Sequencer Step 58 Velocity 5,909,2957,128,255,,,,128=Rest
+Sequencer Step 59 Velocity 5,910,2958,128,255,,,,128=Rest
+Sequencer Step 60 Velocity 5,911,2959,128,255,,,,128=Rest
+Sequencer Step 61 Velocity 5,912,2960,128,255,,,,128=Rest
+Sequencer Step 62 Velocity 5,913,2961,128,255,,,,128=Rest
+Sequencer Step 63 Velocity 5,914,2962,128,255,,,,128=Rest
+Sequencer Step 64 Velocity 5,915,2963,128,255,,,,128=Rest
+Sequencer Step 1 Note 6,916,2964,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 2 Note 6,917,2965,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 3 Note 6,918,2966,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 4 Note 6,919,2967,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 5 Note 6,920,2968,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 6 Note 6,921,2969,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 7 Note 6,922,2970,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 8 Note 6,923,2971,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 9 Note 6,924,2972,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 10 Note 6,925,2973,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 11 Note 6,926,2974,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 12 Note 6,927,2975,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 13 Note 6,928,2976,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 14 Note 6,929,2977,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 15 Note 6,930,2978,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 16 Note 6,931,2979,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 17 Note 6,932,2980,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 18 Note 6,933,2981,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 19 Note 6,934,2982,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 20 Note 6,935,2983,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 21 Note 6,936,2984,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 22 Note 6,937,2985,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 23 Note 6,938,2986,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 24 Note 6,939,2987,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 25 Note 6,940,2988,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 26 Note 6,941,2989,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 27 Note 6,942,2990,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 28 Note 6,943,2991,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 29 Note 6,944,2992,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 30 Note 6,945,2993,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 31 Note 6,946,2994,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 32 Note 6,947,2995,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 33 Note 6,948,2996,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 34 Note 6,949,2997,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 35 Note 6,950,2998,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 36 Note 6,951,2999,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 37 Note 6,952,3000,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 38 Note 6,953,3001,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 39 Note 6,954,3002,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 40 Note 6,955,3003,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 41 Note 6,956,3004,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 42 Note 6,957,3005,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 43 Note 6,958,3006,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 44 Note 6,959,3007,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 45 Note 6,960,3008,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 46 Note 6,961,3009,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 47 Note 6,962,3010,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 48 Note 6,963,3011,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 49 Note 6,964,3012,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 50 Note 6,965,3013,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 51 Note 6,966,3014,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 52 Note 6,967,3015,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 53 Note 6,968,3016,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 54 Note 6,969,3017,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 55 Note 6,970,3018,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 56 Note 6,971,3019,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 57 Note 6,972,3020,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 58 Note 6,973,3021,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 59 Note 6,974,3022,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 60 Note 6,975,3023,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 61 Note 6,976,3024,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 62 Note 6,977,3025,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 63 Note 6,978,3026,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 64 Note 6,979,3027,0,128,,,,"Semitones (C0 - G10), 128=Tie"
+Sequencer Step 1 Velocity 6,980,3028,128,255,,,,128=Rest
+Sequencer Step 2 Velocity 6,981,3029,128,255,,,,128=Rest
+Sequencer Step 3 Velocity 6,982,3030,128,255,,,,128=Rest
+Sequencer Step 4 Velocity 6,983,3031,128,255,,,,128=Rest
+Sequencer Step 5 Velocity 6,984,3032,128,255,,,,128=Rest
+Sequencer Step 6 Velocity 6,985,3033,128,255,,,,128=Rest
+Sequencer Step 7 Velocity 6,986,3034,128,255,,,,128=Rest
+Sequencer Step 8 Velocity 6,987,3035,128,255,,,,128=Rest
+Sequencer Step 9 Velocity 6,988,3036,128,255,,,,128=Rest
+Sequencer Step 10 Velocity 6,989,3037,128,255,,,,128=Rest
+Sequencer Step 11 Velocity 6,990,3038,128,255,,,,128=Rest
+Sequencer Step 12 Velocity 6,991,3039,128,255,,,,128=Rest
+Sequencer Step 13 Velocity 6,992,3040,128,255,,,,128=Rest
+Sequencer Step 14 Velocity 6,993,3041,128,255,,,,128=Rest
+Sequencer Step 15 Velocity 6,994,3042,128,255,,,,128=Rest
+Sequencer Step 16 Velocity 6,995,3043,128,255,,,,128=Rest
+Sequencer Step 17 Velocity 6,996,3044,128,255,,,,128=Rest
+Sequencer Step 18 Velocity 6,997,3045,128,255,,,,128=Rest
+Sequencer Step 19 Velocity 6,998,3046,128,255,,,,128=Rest
+Sequencer Step 20 Velocity 6,999,3047,128,255,,,,128=Rest
+Sequencer Step 21 Velocity 6,1000,3048,128,255,,,,128=Rest
+Sequencer Step 22 Velocity 6,1001,3049,128,255,,,,128=Rest
+Sequencer Step 23 Velocity 6,1002,3050,128,255,,,,128=Rest
+Sequencer Step 24 Velocity 6,1003,3051,128,255,,,,128=Rest
+Sequencer Step 25 Velocity 6,1004,3052,128,255,,,,128=Rest
+Sequencer Step 26 Velocity 6,1005,3053,128,255,,,,128=Rest
+Sequencer Step 27 Velocity 6,1006,3054,128,255,,,,128=Rest
+Sequencer Step 28 Velocity 6,1007,3055,128,255,,,,128=Rest
+Sequencer Step 29 Velocity 6,1008,3056,128,255,,,,128=Rest
+Sequencer Step 30 Velocity 6,1009,3057,128,255,,,,128=Rest
+Sequencer Step 31 Velocity 6,1010,3058,128,255,,,,128=Rest
+Sequencer Step 32 Velocity 6,1011,3059,128,255,,,,128=Rest
+Sequencer Step 33 Velocity 6,1012,3060,128,255,,,,128=Rest
+Sequencer Step 34 Velocity 6,1013,3061,128,255,,,,128=Rest
+Sequencer Step 35 Velocity 6,1014,3062,128,255,,,,128=Rest
+Sequencer Step 36 Velocity 6,1015,3063,128,255,,,,128=Rest
+Sequencer Step 37 Velocity 6,1016,3064,128,255,,,,128=Rest
+Sequencer Step 38 Velocity 6,1017,3065,128,255,,,,128=Rest
+Sequencer Step 39 Velocity 6,1018,3066,128,255,,,,128=Rest
+Sequencer Step 40 Velocity 6,1019,3067,128,255,,,,128=Rest
+Sequencer Step 41 Velocity 6,1020,3068,128,255,,,,128=Rest
+Sequencer Step 42 Velocity 6,1021,3069,128,255,,,,128=Rest
+Sequencer Step 43 Velocity 6,1022,3070,128,255,,,,128=Rest
+Sequencer Step 44 Velocity 6,1023,3071,128,255,,,,128=Rest
+Sequencer Step 45 Velocity 6,1024,3072,128,255,,,,128=Rest
+Sequencer Step 46 Velocity 6,1025,3073,128,255,,,,128=Rest
+Sequencer Step 47 Velocity 6,1026,3074,128,255,,,,128=Rest
+Sequencer Step 48 Velocity 6,1027,3075,128,255,,,,128=Rest
+Sequencer Step 49 Velocity 6,1028,3076,128,255,,,,128=Rest
+Sequencer Step 50 Velocity 6,1029,3077,128,255,,,,128=Rest
+Sequencer Step 51 Velocity 6,1030,3078,128,255,,,,128=Rest
+Sequencer Step 52 Velocity 6,1031,3079,128,255,,,,128=Rest
+Sequencer Step 53 Velocity 6,1032,3080,128,255,,,,128=Rest
+Sequencer Step 54 Velocity 6,1033,3081,128,255,,,,128=Rest
+Sequencer Step 55 Velocity 6,1034,3082,128,255,,,,128=Rest
+Sequencer Step 56 Velocity 6,1035,3083,128,255,,,,128=Rest
+Sequencer Step 57 Velocity 6,1036,3084,128,255,,,,128=Rest
+Sequencer Step 58 Velocity 6,1037,3085,128,255,,,,128=Rest
+Sequencer Step 59 Velocity 6,1038,3086,128,255,,,,128=Rest
+Sequencer Step 60 Velocity 6,1039,3087,128,255,,,,128=Rest
+Sequencer Step 61 Velocity 6,1040,3088,128,255,,,,128=Rest
+Sequencer Step 62 Velocity 6,1041,3089,128,255,,,,128=Rest
+Sequencer Step 63 Velocity 6,1042,3090,128,255,,,,128=Rest
+Sequencer Step 64 Velocity 6,1043,3091,128,255,,,,128=Rest

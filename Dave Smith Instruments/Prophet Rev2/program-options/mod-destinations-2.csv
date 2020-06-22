@@ -1,0 +1,54 @@
+Off
+Osc 1 Freq
+Osc 2 Freq
+Osc All Freq
+Osc Mix
+Noise Level
+Sub Osc Level
+Osc 1 Shape
+Osc 2 Shape
+Osc All Shape
+Filter Cutoff
+Filter Resonance
+Filter Audio Mod
+VCA
+Pan
+LFO 1 Freq
+LFO 2 Freq
+LFO 3 Freq
+LFO 4 Freq
+LFO All Freq
+LFO 1 Amount
+LFO 2 Amount
+LFO 3 Amount
+LFO 4 Amount
+LFO All Amount
+Filter Env Amount
+Amp Env Amount
+Env 3 Amount
+Env All Amount
+Filter Attack
+VCA Attack
+Env 3 Attack
+Env All Attack
+Filter Decay
+VCA Decay
+Env 3 Decay
+Env All Decay
+Filter Release
+VCA Release
+Env 3 Release
+Env All Release
+Mod 1 Amount
+Mod 2 Amount
+Mod 3 Amount
+Mod 4 Amount
+Mod 5 Amount
+Mod 6 Amount
+Mod 7 Amount
+Mod 8 Amount
+Osc Slop
+FX Mix
+FX Param 1
+FX Param 2
+Slew
