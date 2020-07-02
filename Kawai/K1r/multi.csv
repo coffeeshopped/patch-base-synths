@@ -1,2 +1,20 @@
-Parameter Name,Byte #,Bits,Min Val,Max Val,Display Offset,Options,Path,Notes
-,,,,,,,,
+Parameter Name,Byte,Bits,Min Val,Max Val,Display Offset,Options,Path,Notes
+Section 1 Single Patch #,10,6,0,63,0,,,
+Section 1 Zone Note Low,11,7,0,127,,,,
+Section 1 Zone Note High,12,7,0,127,,,,
+Section 1 Polyphony,13,0-3,0,9,,,,B
+Section 1 Output,13,4-5,0,2,,,,
+Section 1 Mode 1,13,6,0,1,,,,
+Section 1 Mode M,14,0-3,0,1,,,,
+Section 1 Receive Channel,14,4-5,0,16,,,,
+Section 1 Velocity Switch Point,14,2,0,2,,,,
+Section 1 Transpose,15,6,0,48,-24,,,-24 to  +24 is visible range
+Section 1 Tune,16,7,0,100,-50,,,-50 to  +50 is visible range
+Section 1 Level,17,7,0,100,,,,
+Repeat Section 2,,,,,,,,
+Repeat Section 3,,,,,,,,
+Repeat Section 4,,,,,,,,
+Repeat Section 5,,,,,,,,
+Repeat Section 6,,,,,,,,
+Repeat Section 7,,,,,,,,
+Repeat Section 8,,,,,,,,
