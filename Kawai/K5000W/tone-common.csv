@@ -1,6 +1,82 @@
 Parameter Name,Param #,Min Val,Max Val,Display Offset,Options,Path,Notes
 FX Algorithm,1,0,3,,,,
-Reverb Type,2,0,10,,,,
-Reverb Dry/Wet 1,3,0,100,,,,
-Reverb Dry/Wet 2,4,0,100,,,,
-Reverb Param 2,5,0,127,,,,
+Reverb Type,2,0,10,,,,see options sheet col B
+Reverb Dry/Wet 1,3,0,100,,,,see reverb parameters sheet
+Reverb Dry/Wet 2,4,0,100,,,,see reverb parameters sheet
+Reverb Param 2,5,0,127,,,,see reverb parameters sheet
+Reverb Param 3,6,0,127,,,,see reverb parameters sheet
+Reverb Param 4 (HF Damping),7,0,127,,,,see reverb parameters sheet
+Effect 1 Type,8,11,47,,,,see options sheet col C
+Effect 1 Depth,9,0,100,,,,see fx parameters sheet
+Effect 1 Param 1,10,0,127,,,,see fx parameters sheet
+Effect 1 Param 2,11,0,127,,,,see fx parameters sheet
+Effect 1 Param 3,12,0,127,,,,see fx parameters sheet
+Effect 1 Param 4,13,0,127,,,,see fx parameters sheet
+Effect 2 Type,14,11,47,,,,
+Effect 2 Depth,15,0,100,,,,
+Effect 2 Param 1,16,0,127,,,,
+Effect 2 Param 2,17,0,127,,,,
+Effect 2 Param 3,18,0,127,,,,
+Effect 2 Param 4,19,0,127,,,,
+Effect 3 Type,20,11,47,,,,
+Effect 3 Depth,21,0,100,,,,
+Effect 3 Param 1,22,0,127,,,,
+Effect 3 Param 2,23,0,127,,,,
+Effect 3 Param 3,24,0,127,,,,
+Effect 3 Param 4,25,0,127,,,,
+Effect 4 Type,26,11,47,,,,
+Effect 4 Depth,27,0,100,,,,
+Effect 4 Param 1,28,0,127,,,,
+Effect 4 Param 2,29,0,127,,,,
+Effect 4 Param 3,30,0,127,,,,
+Effect 4 Param 4,31,0,127,,,,
+GEQ Frequency 1 (100 Hz),32,58,70,-64,,,-6dB to +6dB
+GEQ Frequency 2 (200 Hz),33,58,70,-64,,,-6dB to +6dB
+GEQ Frequency 3 (450 Hz),34,58,70,-64,,,-6dB to +6dB
+GEQ Frequency 4 (1 kHz),35,58,70,-64,,,-6dB to +6dB
+GEQ Frequency 5 (2 kHz),36,58,70,-64,,,-6dB to +6dB
+GEQ Frequency 6 (4 kHz),37,58,70,-64,,,-6dB to +6dB
+GEQ Frequency 7 (8 kHz),38,58,70,-64,,,-6dB to +6dB
+Drum Mark,39,0,0,,,,From manual: 0=normal(not drum)
+Name 1st,40,,,,,,ASCII
+Name 2nd,41,,,,,,ASCII
+Name 3rd,42,,,,,,ASCII
+Name 4th,43,,,,,,ASCII
+Name 5th,44,,,,,,ASCII
+Name 6th,45,,,,,,ASCII
+Name 7th,46,,,,,,ASCII
+Name 8th,47,,,,,,ASCII
+Volume,48,0,127,1,,,
+Poly,49,0,2,,"Poly, Solo 1, Solo 2",,"Poly, Solo 1 (Always retrigger ENV), Solo 2 (Legato does not retrigger ENV)"
+inactive,50,,,,,,
+Number of Sources,51,0,4,2,,,"Sources are oscillators, basically"
+Source Mute,52,0,63,,,,"Bits 0-5 represent Sources 1-6. 0 mutes, 1 unmutes"
+Amplitude Modulation,53,0,5,1,"Off, 1>2, 2>3, 3>4, 4>5, 5>6",,AM can only be applied to adjacent sources
+Effect Control Source 1,54,0,13,,,,see options sheet col D
+Effect Control Dest 1,55,0,9,,,,see options sheet col E
+Effect Control Depth 1,56,33,95,-64,,,
+Effect Control Source 2,57,0,13,,,,
+Effect Control Dest 2,58,0,9,,,,
+Effect Control Depth 3,59,33,95,-64,,,
+Portamento on/off,60,0,1,,,,
+Portamento Speed,61,0,127,,,,
+"Macro Controller 1, Dest 1",62,0,19,,,,"see options sheet col F. K5000S/R only, K5000W=0"
+"Macro Controller 1, Dest 2",63,0,19,,,,
+"Macro Controller 2, Dest 1",64,0,19,,,,
+"Macro Controller 2, Dest 2",65,0,19,,,,
+"Macro Controller 3, Dest 1",66,0,19,,,,
+"Macro Controller 3, Dest 2",67,0,19,,,,
+"Macro Controller 4, Dest 1",68,0,19,,,,
+"Macro Controller 4, Dest 2",69,0,19,,,,
+"Macro Controller 1, Depth 1",70,33,95,-64,,,"K5000S/R only, K5000W=64"
+"Macro Controller 1, Depth 2",71,33,95,-64,,,
+"Macro Controller 2, Depth 1",72,33,95,-64,,,
+"Macro Controller 2, Depth 2",73,33,95,-64,,,
+"Macro Controller 3, Depth 1",74,33,95,-64,,,
+"Macro Controller 3, Depth 2",75,33,95,-64,,,
+"Macro Controller 4, Depth 1",76,33,95,-64,,,
+"Macro Controller 4, Depth 2",77,33,95,-64,,,
+Switch 1 Destination,78,0,16,,,,"see options sheet col G. K5000S/R only, K5000W=0"
+Switch 2 Destination,79,0,16,,,,
+Foot Switch 1 Destination,80,0,16,,,,
+Foot Switch 2 Destination,81,0,16,,,,

@@ -1,6 +1,87 @@
 Parameter Name,Param #,Min Val,Max Val,Display Offset,Options,Path,Notes
-Zone Lo,1,0,127,,,,
-Zone Hi,2,0,127,,,,
-Velo,3,0,,,,,2 values are packed in this byte. See docs
+Zone Lo,1,0,127,,,,Keyboard splits
+Zone Hi,2,0,127,,,,Keyboard splits
+Velo,3,0,127,,,,"2 values are packed in this byte: (1) the switch that determines whether this source will always play, only play ABOVE a certain velocity, or only play BELOW a certain velocity, and (2) the velocity threshold itself. See docs (page 55 of manual and 16 of midi implementation)"
 FX Path,4,0,3,,,,
 Volume,5,0,127,,,,
+Pitch Bend > Pitch Amount,6,0,24,,,,Measured in semitones
+Pitch Bend > Cutoff,7,0,31,,,,
+Aftertouch Destination 1,8,0,19,,,,see options sheet col F
+Aftertouch Depth 1,9,33,95,-64,,,
+Aftertouch Destination 2,10,0,19,,,,
+Aftertouch Depth 2,11,33,95,-64,,,
+Mod Wheel Destination 1,12,0,19,,,,
+Mod Wheel Depth 1,13,33,95,-64,,,
+Mod Wheel Destination 2,14,0,19,,,,
+Mod Wheel Depth 2,15,33,95,-64,,,
+Expression Pedal Dest 1,16,0,19,,,,
+Expression Pedal Depth 1,17,33,95,-64,,,
+Expression Pedal Dest 2,18,0,19,,,,
+Expression Pedal Depth 2,19,33,95,-64,,,
+Assignable Control Source 1,20,0,13,,,,see options sheet col D
+Assignable Control Source 1 Dest,21,0,19,,,,see options sheet col F
+Assignable Control Source 1 Depth,22,33,95,-64,,,
+Assignable Control Source 2,20,0,13,,,,
+Assignable Control Source 2 Dest,21,0,19,,,,
+Assignable Control Source 2 Depth,22,33,95,-64,,,
+Key On Delay,26,0,127,,,,
+Pan Type,27,0,3,,"Normal, Key Scale +, Key Scale -, Random",,
+Pan Value,28,1,127,-64,,,63L–63R
+Wave Kit MSB,29,,,,,,see options sheet col H. Waves 0–340 are PCM for K5000W PCM-only B bank. Waves 341–463 are PCM for use in all additive patches. Wave 512 is the additive source
+Wave Kit LSB,30,,,,,,
+Coarse Tune,31,40,88,-64,,,"Semitones, 2 octaves up and down"
+Fine Tune,32,1,127,-64,,,
+Fixed Key,33,0,108,,,,0=Off. 21–108 = A-1 – C7
+Key Scale Pitch,34,0,3,,"0 cents, 25 cents, 33 cents, 50 cents",,
+Pitch Env Start Level,35,1,127,-64,,,
+Pitch Env Attack Time,36,0,127,,,,
+Pitch Env Attack Level,37,1,127,-64,,,
+Pitch Env Decay Time,38,0,127,,,,
+Pitch Env Time Velo Sens,39,1,127,-64,,,
+Pitch Env Level Velo Sens,40,1,127,-64,,,
+DCF Bypass Switch,41,0,1,,"Active, Bypass",,
+DCF Mode,42,0,1,,"LP, HP",,
+DCF Velo Curve,43,0,11,1,,,
+DCF Resonance,44,0,7,,,,
+DCF Input Level,45,0,7,,,,"Not sure exactly what this means. From the manual: ""Adjusts the input level to the filter"""
+DCF Cutoff,46,0,127,,,,
+DCF Cutoff Key Scale Depth,47,1,127,-64,,,
+DCF Cutoff Velocity Depth,48,1,127,-64,,,
+DCF Envelope Depth,49,1,127,-64,,,
+DCF Env Attack Time,50,0,127,,,,
+DCF Env Decay1 Time,51,0,127,,,,
+DCF Env Decay1 Level,52,1,127,-64,,,
+DCF Env Decay2 Time,53,0,127,,,,
+DCF Env Decay2 (Sustain) Level,54,1,127,-64,,,
+DCF Env Release Time,55,0,127,,,,
+DCF Key Scale to Env Attack Time,56,1,127,-64,,,
+DCF Key Scale to Env Decay1 Time,57,1,127,-64,,,
+DCF Velocity to Env Depth,58,1,127,-64,,,
+DCF Velocity to Env Attack Time,59,1,127,-64,,,
+DCF Velocity to Env Decay1 Time,60,1,127,-64,,,
+DCA Velocity Curve,61,0,11,1,,,The MIDI spec indicates no offset here. I'll have to double check 
+DCA Env Attack Time,62,0,127,,,,
+DCA Env Decay1 Time,63,0,127,,,,
+DCA Env Decay1 Level,64,0,127,,,,
+DCA Env Decay2 Time,65,0,127,,,,
+DCA Env Decay2 (Sustain) Level,66,0,127,,,,
+DCA Env Release Time,67,0,127,,,,
+DCA Key Scale to Env Level,68,1,127,-64,,,
+DCA Key Scale to Env Attack Time,69,1,127,-64,,,
+DCA Key Scale to Env Decay1 Time,70,1,127,-64,,,
+DCA Key Scale to Env Release Time,71,1,127,-64,,,
+DCA Velocity to Level,72,0,63,,,,
+DCA Velocity to Env Attack Time,73,1,127,-64,,,
+DCA Velocity to Env Decay1 Time,74,1,127,-64,,,
+DCA Velocity to Env Release Time,75,1,127,-64,,,
+LFO Waveform,76,0,4,,"Triangle, Square, Saw, Sine, Random",,
+LFO Speed,77,0,127,,,,0.1Hz to 18Hz
+LFO Delay Onset,78,0,127,,,,0 to 2s
+LFO Fade in Time,79,0,127,,,,
+LFO Fade in to Speed,80,0,63,,,,
+LFO Vibrato (DCO Modulation) Amount,81,0,63,,,,Seems plausible that this might actually be bi-polar
+LFO Vibrato Key Scale,82,1,127,-64,,,
+LFO Growl (DCF Modulation) Amount,83,0,63,,,,
+LFO Growl Key Scale,84,1,127,-64,,,
+LFO Tremolo (DCA Modulation) Amount,85,0,63,,,,
+LFO Tremolo Key Scale,86,1,127,-64,,,
